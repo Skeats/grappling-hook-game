@@ -1,14 +1,22 @@
 extends CharacterBody3D
 
-const WALK_SPEED = 5.0
+const MAX_SPEED_AIR = 2.0
+const MAX_SPEED_GROUND = 6.0
+const MAX_ACCELERATION = 10 * MAX_SPEED_GROUND
+const GRAVITY = 15.34
+const STOP_SPEED = 2.5
+const JUMP_IMPULSE = sqrt(2 * GRAVITY * 0.85)
+const JUMP_FRAME_WINDOW = 4
+
 const SPRINT_MODIFIER = 1.25
-const ACCELERATION = 0.65
-const AIR_ACCELERATION = 0.25
-const JUMP_VELOCITY = 6.5
 
 const MOUSE_SENSITIVITY = 0.2
 const CAMERA_CONSTRAINT_UP = 80
 const CAMERA_CONSTRAINT_DOWN = -90
+
+const FOV = 90
+const SPRINT_FOV = FOV + 5
+const SPRINT_FOV_SCALING = 0.1
 
 # Grapple constants
 const GRAPPLE_SPEED = 0.85
@@ -17,55 +25,63 @@ const GRAPPLE_RANGE = 15
 var grapple_pos: Vector3 = Vector3.ZERO
 var grapple_mesh: MeshInstance3D
 
+var jump_frame_timer: int = 0
+var friction: float = 6.0
+
 @onready var head: Node3D = $Head
 @onready var player_camera: Camera3D = %PlayerCamera
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	player_camera.fov = FOV
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 
-	# The unit vector pointing in the direction that the player would like to go, based on their input and
-	# the direction that the camera is facing.
-	var wish_direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var wish_direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var wish_jump: bool = Input.is_action_just_pressed("jump")
 
-	# The horizontal velocity that the player wants to go
-	var wish_velocity := wish_direction * WALK_SPEED
+	if jump_frame_timer > 0:
+		jump_frame_timer -= 1
 
-	# Preserve the current velocity by putting it in wish velocity
-	wish_velocity.y = velocity.y
+	if is_on_floor():
+		if wish_jump:
+			velocity.y = JUMP_IMPULSE
+			velocity = accelerate(wish_direction, MAX_SPEED_AIR, delta)
+			wish_jump = false
+			jump_frame_timer = JUMP_FRAME_WINDOW
+		elif jump_frame_timer == 0:
+			var speed = velocity.length()
 
-	# Sprint acceleration
-	if Input.is_action_pressed("sprint") and is_on_floor():
-		wish_velocity *= SPRINT_MODIFIER
+			if speed != 0:
+				var control = max(STOP_SPEED, speed)
+				var drop = control * friction * delta
 
-	# Jump impulse
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y += JUMP_VELOCITY
+				velocity *= max(speed - drop, 0) / speed
+			velocity = accelerate(wish_direction, MAX_SPEED_GROUND, delta)
+	else:
+		velocity.y -= GRAVITY * delta
+	velocity = accelerate(wish_direction, MAX_SPEED_AIR, delta)
 
 	# Apply the grapple force
 	if grapple_pos:
-		var grapple_direction = global_position.direction_to(grapple_pos)
-		var grapple_length = global_position.distance_to(grapple_pos)
-		var grapple_time = grapple_length / GRAPPLE_SPEED
-		var grapple_velocity = grapple_direction * (grapple_length / grapple_time)
+		var grapple_direction: Vector3 = global_position.direction_to(grapple_pos)
+		var grapple_length: float = global_position.distance_to(grapple_pos)
+		var grapple_time: float = grapple_length / GRAPPLE_SPEED
+		var grapple_velocity: Vector3 = grapple_direction * (grapple_length / grapple_time)
 
 		velocity += grapple_velocity
 
-	# Add the gravity.
-	if not is_on_floor():
-		# This allows the velocity to be preserved if the player isn't giving a direction (inertia)
-		# and reduces the players movement in the air
-		if wish_velocity:
-			velocity = velocity.move_toward(wish_velocity, AIR_ACCELERATION)
-		velocity += get_gravity() * 1.5 * delta
-	else:
-		velocity = velocity.move_toward(wish_velocity, ACCELERATION)
-
 	#print("Wish velocity: %s" % wish_velocity)
-	#print("Velocity: %s" % velocity)
+	print("Speed: %s" % velocity.length())
 	move_and_slide()
+
+func accelerate(wish_dir: Vector3, max_speed: float, delta):
+	var current_speed = velocity.dot(wish_dir)
+
+	var add_speed = clamp(max_speed - current_speed, 0, MAX_ACCELERATION * delta)
+
+	return velocity + add_speed * wish_dir
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -98,7 +114,6 @@ func try_send_grapple() -> Vector3:
 	query.collision_mask = 0b10
 	var result = space_state.intersect_ray(query)
 	if result:
-		print("Grapple intersected with object at %s" % result.position)
 		return result.position
 	else:
 		return Vector3.ZERO

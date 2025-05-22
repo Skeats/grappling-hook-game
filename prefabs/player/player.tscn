@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dug4ymo133wxd"]
 
-[ext_resource type="Script" uid="uid://c8h2qey7n5rgb" path="res://player/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://c8h2qey7n5rgb" path="res://prefabs/player/player.gd" id="1_4flbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 

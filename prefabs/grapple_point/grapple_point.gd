@@ -2,7 +2,7 @@
 class_name GrapplePoint
 extends StaticBody3D
 
-const GRAPPLE_MATERIAL = preload("res://grapple_material.tres")
+const GRAPPLE_MATERIAL = preload("res://prefabs/grapple_point/grapple_material.tres")
 
 @export var shape: Shape3D = BoxShape3D.new() :
 	set(value):
@@ -24,6 +24,10 @@ func _ready() -> void:
 
 	set_collision_layer_value(2, true)
 	change_shape()
+
+func _exit_tree() -> void:
+	for child in get_children():
+		child.queue_free()
 
 func change_shape() -> void:
 	shape.changed.connect(update_appearance)
