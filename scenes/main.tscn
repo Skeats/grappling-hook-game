@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://ch7jjtkj17ho0" path="res://prefabs/grapple_point/grapple_material.tres" id="4_o6xl0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
+resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jyhfs"]

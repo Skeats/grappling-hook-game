@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const MAX_SPEED_AIR = 2.0
+const MAX_SPEED_AIR = 1.2
 const MAX_SPEED_GROUND = 6.0
 const MAX_ACCELERATION = 10 * MAX_SPEED_GROUND
 const GRAVITY = 15.34
