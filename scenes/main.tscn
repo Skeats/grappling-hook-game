@@ -9,26 +9,36 @@
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jyhfs"]
-material = ExtResource("4_o6xl0")
-size = Vector3(5, 1, 5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
-size = Vector3(5, 1, 5)
-
 [sub_resource type="BoxMesh" id="BoxMesh_tefeu"]
+resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
 size = Vector3(5, 1, 5)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_o6xl0"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_o6xl0"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
 
-[sub_resource type="SphereMesh" id="SphereMesh_tipki"]
+[sub_resource type="BoxMesh" id="BoxMesh_tipki"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_85g3d"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_choun"]
+resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_jyhfs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ya4ey"]
+resource_local_to_scene = true
+radius = 1.0
 
-[sub_resource type="SphereMesh" id="SphereMesh_tbgi4"]
+[sub_resource type="SphereMesh" id="SphereMesh_jyhfs"]
+resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -81,49 +91,49 @@ metadata/_edit_group_ = true
 shape = SubResource("BoxShape3D_jyhfs")
 
 [node name="@MeshInstance3D@28152" type="MeshInstance3D" parent="Obstacles/Start"]
-mesh = SubResource("BoxMesh_jyhfs")
+mesh = SubResource("BoxMesh_tefeu")
 
 [node name="End" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2825, 49.902, 9.15634)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_tbgi4")
+shape = SubResource("BoxShape3D_o6xl0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
 [node name="@CollisionShape3D@29672" type="CollisionShape3D" parent="Obstacles/End"]
-shape = SubResource("BoxShape3D_tbgi4")
+shape = SubResource("BoxShape3D_o6xl0")
 
 [node name="@MeshInstance3D@29673" type="MeshInstance3D" parent="Obstacles/End"]
-mesh = SubResource("BoxMesh_tefeu")
+mesh = SubResource("BoxMesh_tipki")
 
 [node name="GrapplePoint" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80423, 22.9795, 3.39231)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_o6xl0")
+shape = SubResource("SphereShape3D_85g3d")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
 [node name="@CollisionShape3D@30734" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
-shape = SubResource("SphereShape3D_o6xl0")
+shape = SubResource("SphereShape3D_85g3d")
 
 [node name="@MeshInstance3D@30735" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
-mesh = SubResource("SphereMesh_tipki")
+mesh = SubResource("SphereMesh_choun")
 
 [node name="GrapplePoint2" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 11.6692)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_jyhfs")
+shape = SubResource("SphereShape3D_ya4ey")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
 [node name="@CollisionShape3D@32245" type="CollisionShape3D" parent="Obstacles/GrapplePoint2"]
-shape = SubResource("SphereShape3D_jyhfs")
+shape = SubResource("SphereShape3D_ya4ey")
 
 [node name="@MeshInstance3D@32246" type="MeshInstance3D" parent="Obstacles/GrapplePoint2"]
-mesh = SubResource("SphereMesh_tbgi4")
+mesh = SubResource("SphereMesh_jyhfs")
 
 [node name="Environment" type="Node" parent="."]
 
