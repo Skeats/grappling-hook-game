@@ -6,22 +6,34 @@ const GRAPPLE_MATERIAL = preload("res://prefabs/grapple_point/grapple_material.t
 
 @export var shape: Shape3D = BoxShape3D.new() :
 	set(value):
-		shape = value
+		shape = value.duplicate()
+		shape.resource_local_to_scene = true
 		change_shape()
 
 var collider: CollisionShape3D
 var mesh_instance: MeshInstance3D
 
 func _ready() -> void:
-	collider = CollisionShape3D.new()
-	mesh_instance = MeshInstance3D.new()
-	add_child(collider)
-	add_child(mesh_instance)
+	for child in get_children():
+		match child.get_class():
+			"CollisionShape3D":
+				collider = child
+			"MeshInstance3D":
+				mesh_instance = child
+
+	if not collider:
+		collider = CollisionShape3D.new()
+		add_child(collider)
+
+	if not mesh_instance:
+		mesh_instance = MeshInstance3D.new()
+		add_child(mesh_instance)
 
 	if Engine.is_editor_hint():
 		collider.owner = get_tree().edited_scene_root
 		mesh_instance.owner = get_tree().edited_scene_root
 
+	set_meta("_edit_group_", true)
 	set_collision_layer_value(2, true)
 	change_shape()
 
@@ -42,10 +54,11 @@ func update_appearance() -> void:
 	match shape.get_class():
 		"BoxShape3D":
 			mesh_instance.mesh = BoxMesh.new()
-			mesh_instance.mesh.size = shape.size
+			mesh_instance.mesh.size = collider.shape.size
 		"SphereShape3D":
 			mesh_instance.mesh = SphereMesh.new()
-			mesh_instance.mesh.radius = shape.radius
-			mesh_instance.mesh.height = shape.radius * 2
+			mesh_instance.mesh.radius = collider.shape.radius
+			mesh_instance.mesh.height = collider.shape.radius * 2
 
 	mesh_instance.mesh.surface_set_material(0, GRAPPLE_MATERIAL)
+	mesh_instance.mesh.resource_local_to_scene = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cba18lb1adr66"]
+[gd_scene load_steps=15 format=3 uid="uid://cba18lb1adr66"]
 
 [ext_resource type="PackedScene" uid="uid://dug4ymo133wxd" path="res://prefabs/player/player.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://c5qt2a1vaouwm" path="res://prefabs/grapple_point/grapple_point.gd" id="3_tefeu"]
@@ -6,9 +6,15 @@
 [ext_resource type="Material" uid="uid://ch7jjtkj17ho0" path="res://prefabs/grapple_point/grapple_material.tres" id="4_o6xl0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
+resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tefeu"]
+resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
 size = Vector3(5, 1, 5)
 
@@ -51,12 +57,13 @@ collision_layer = 3
 script = ExtResource("3_tefeu")
 shape = SubResource("BoxShape3D_jyhfs")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
 
 [node name="@CollisionShape3D@39502" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
-shape = SubResource("BoxShape3D_jyhfs")
+shape = SubResource("BoxShape3D_tbgi4")
 
 [node name="@MeshInstance3D@39503" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
-mesh = SubResource("BoxMesh_tbgi4")
+mesh = SubResource("BoxMesh_tefeu")
 
 [node name="Environment" type="Node" parent="."]
 
