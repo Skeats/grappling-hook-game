@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cba18lb1adr66"]
+[gd_scene load_steps=22 format=3 uid="uid://cba18lb1adr66"]
 
 [ext_resource type="PackedScene" uid="uid://dug4ymo133wxd" path="res://prefabs/player/player.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://c5qt2a1vaouwm" path="res://prefabs/grapple_point/grapple_point.gd" id="3_tefeu"]
@@ -8,9 +8,26 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
+[sub_resource type="BoxMesh" id="BoxMesh_jyhfs"]
 material = ExtResource("4_o6xl0")
 size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tefeu"]
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_o6xl0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tipki"]
+material = ExtResource("4_o6xl0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jyhfs"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_tbgi4"]
+material = ExtResource("4_o6xl0")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -38,25 +55,74 @@ lightmap_size_hint = Vector2i(5002, 5002)
 material = ExtResource("4_jyhfs")
 size = Vector2(1000, 1000)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tefeu"]
+size = Vector3(1, 10, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
+size = Vector3(1, 10, 10)
+
 [node name="Main" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jyhfs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.0612, 0)
 
 [node name="Obstacles" type="Node" parent="."]
 
-[node name="GrapplePoint" type="StaticBody3D" parent="Obstacles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, 0)
+[node name="Start" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.5571, 0)
 collision_layer = 3
 script = ExtResource("3_tefeu")
 shape = SubResource("BoxShape3D_jyhfs")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
 
-[node name="@CollisionShape3D@39502" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
+[node name="@CollisionShape3D@28151" type="CollisionShape3D" parent="Obstacles/Start"]
 shape = SubResource("BoxShape3D_jyhfs")
 
-[node name="@MeshInstance3D@39503" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
-mesh = SubResource("BoxMesh_tbgi4")
+[node name="@MeshInstance3D@28152" type="MeshInstance3D" parent="Obstacles/Start"]
+mesh = SubResource("BoxMesh_jyhfs")
+
+[node name="End" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2825, 49.902, 9.15634)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_tbgi4")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="@CollisionShape3D@29672" type="CollisionShape3D" parent="Obstacles/End"]
+shape = SubResource("BoxShape3D_tbgi4")
+
+[node name="@MeshInstance3D@29673" type="MeshInstance3D" parent="Obstacles/End"]
+mesh = SubResource("BoxMesh_tefeu")
+
+[node name="GrapplePoint" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80423, 22.9795, 3.39231)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_o6xl0")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="@CollisionShape3D@30734" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
+shape = SubResource("SphereShape3D_o6xl0")
+
+[node name="@MeshInstance3D@30735" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
+mesh = SubResource("SphereMesh_tipki")
+
+[node name="GrapplePoint2" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 11.6692)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_jyhfs")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="@CollisionShape3D@32245" type="CollisionShape3D" parent="Obstacles/GrapplePoint2"]
+shape = SubResource("SphereShape3D_jyhfs")
+
+[node name="@MeshInstance3D@32246" type="MeshInstance3D" parent="Obstacles/GrapplePoint2"]
+mesh = SubResource("SphereMesh_tbgi4")
 
 [node name="Environment" type="Node" parent="."]
 
@@ -123,7 +189,7 @@ material_override = ExtResource("4_jyhfs")
 mesh = SubResource("PlaneMesh_lquwl")
 
 [node name="Label3D" type="Label3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.3331, -6)
 double_sided = false
 outline_modulate = Color(0.20871, 0.20871, 0.20871, 1)
 text = "Kiki's Grappling Hook Playground"
@@ -131,7 +197,7 @@ font_size = 100
 outline_size = 127
 
 [node name="Label3D2" type="Label3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, -6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.3331, -6)
 double_sided = false
 outline_modulate = Color(0.20871, 0.20871, 0.20871, 1)
 text = "WASD to move
@@ -141,3 +207,13 @@ Esc to show mouse
 You can only grapple on purple objects"
 font_size = 50
 outline_size = 127
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3928, 40.8665, 52.7417)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StaticBody3D"]
+shape = SubResource("BoxShape3D_tefeu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
+mesh = SubResource("BoxMesh_tbgi4")
