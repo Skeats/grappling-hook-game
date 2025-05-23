@@ -1,18 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dug4ymo133wxd"]
+[gd_scene load_steps=8 format=3 uid="uid://dug4ymo133wxd"]
 
 [ext_resource type="Script" uid="uid://c8h2qey7n5rgb" path="res://prefabs/player/player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://crdvjv5aehuy0" path="res://addons/kenney_prototype_textures/orange/texture_09.png" id="2_rdx4y"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wv1mm"]
+albedo_texture = ExtResource("2_rdx4y")
+uv1_triplanar = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sxsrd"]
+material = SubResource("StandardMaterial3D_wv1mm")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.75
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4flbx"]
+material = SubResource("StandardMaterial3D_wv1mm")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oul6g"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-anti_aliasing = false
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_sxsrd"]
+properties/0/path = NodePath("Head:rotation:y")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath("Head/PlayerCamera:rotation:x")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:position")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4flbx")
@@ -24,35 +39,23 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 fov = 90.0
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/PlayerCamera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.397094)
+mesh = SubResource("CylinderMesh_sxsrd")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_4flbx")
 
-[node name="PlayerHUD" type="CanvasLayer" parent="."]
+[node name="PlayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+unique_name_in_owner = true
+replication_config = SubResource("SceneReplicationConfig_sxsrd")
 
-[node name="Control" type="Control" parent="PlayerHUD"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Panel" type="Panel" parent="PlayerHUD/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 2.0
-offset_bottom = 2.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_oul6g")
+[node name="Name" type="Label3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4541, 0)
+billboard = 2
+text = "PlayerName"
+outline_size = 27

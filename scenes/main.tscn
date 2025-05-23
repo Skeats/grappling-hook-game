@@ -1,18 +1,19 @@
-[gd_scene load_steps=22 format=3 uid="uid://cba18lb1adr66"]
+[gd_scene load_steps=223 format=3 uid="uid://cba18lb1adr66"]
 
 [ext_resource type="PackedScene" uid="uid://dug4ymo133wxd" path="res://prefabs/player/player.tscn" id="1_jyhfs"]
+[ext_resource type="Script" uid="uid://6skv8mhf0lx3" path="res://scenes/main.gd" id="1_tefeu"]
 [ext_resource type="Script" uid="uid://c5qt2a1vaouwm" path="res://prefabs/grapple_point/grapple_point.gd" id="3_tefeu"]
 [ext_resource type="Material" uid="uid://2mbra64gvxxq" path="res://scenes/world_boundary_material.tres" id="4_jyhfs"]
 [ext_resource type="Material" uid="uid://ch7jjtkj17ho0" path="res://prefabs/grapple_point/grapple_material.tres" id="4_o6xl0"]
+[ext_resource type="Script" uid="uid://dtqamj2inyy7o" path="res://scenes/network_ui.gd" id="5_tbgi4"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jyhfs"]
-resource_local_to_scene = true
-size = Vector3(5, 1, 5)
-
-[sub_resource type="BoxMesh" id="BoxMesh_tefeu"]
-resource_local_to_scene = true
-material = ExtResource("4_o6xl0")
-size = Vector3(5, 1, 5)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkv2x"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o6xl0"]
 resource_local_to_scene = true
@@ -23,22 +24,963 @@ resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
 size = Vector3(5, 1, 5)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_85g3d"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tefeu"]
 resource_local_to_scene = true
+size = Vector3(5, 1, 5)
 
-[sub_resource type="SphereMesh" id="SphereMesh_choun"]
+[sub_resource type="BoxMesh" id="BoxMesh_o6xl0"]
 resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tipki"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_85g3d"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eb6dy"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_trceg"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a8y0u"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jkv2x"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jbj1t"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_muem4"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dp3eg"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ld40"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gqmmt"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yc10j"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2jfr"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bjg73"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bu4jf"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o7ddy"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0loja"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ids8r"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dnhof"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1v6qk"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jscy8"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pm3ni"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_85g3d"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_choun"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ya4ey"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eb6dy"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trceg"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a8y0u"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ld40"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gqmmt"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yc10j"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jscy8"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm3ni"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y6deb"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_og1vs"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2wyq8"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxglm"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2f3dj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yq6so"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fv21b"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tel4y"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qkpxi"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5q0nq"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dgi5k"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8jky"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmb1v"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fuf3a"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pibwh"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6pm6"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5he1u"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5poiv"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2cjbq"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chjal"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cjqg0"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vchkt"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_txyw0"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vc5cj"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nvyfr"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ty1g6"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j2jfr"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bjg73"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bu4jf"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7ddy"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0loja"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ids8r"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dnhof"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1v6qk"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_augu2"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tm6hj"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kf5aa"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5ykj"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e755i"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ro3en"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_od4ux"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xhfw6"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1epgm"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_152kg"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_r4e17"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y57op"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mlv25"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a82wo"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gdvew"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjtvk"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xrs0c"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(5, 1, 5)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ya4ey"]
 resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_eb6dy"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_trceg"]
+resource_local_to_scene = true
 radius = 1.0
 
-[sub_resource type="SphereMesh" id="SphereMesh_jyhfs"]
+[sub_resource type="SphereMesh" id="SphereMesh_a8y0u"]
 resource_local_to_scene = true
 material = ExtResource("4_o6xl0")
 radius = 1.0
 height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tefeu"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_o6xl0"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_tipki"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_85g3d"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_choun"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ya4ey"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_eb6dy"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_trceg"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_a8y0u"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_jkv2x"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jbj1t"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_muem4"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dp3eg"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_0ld40"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gqmmt"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_yc10j"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jscy8"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_pm3ni"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y6deb"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_og1vs"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2wyq8"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_vxglm"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2f3dj"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_yq6so"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fv21b"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_tel4y"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qkpxi"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_5q0nq"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dgi5k"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_j8jky"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kmb1v"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_fuf3a"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pibwh"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_c6pm6"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5he1u"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_5poiv"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2cjbq"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_chjal"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_cjqg0"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_vchkt"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_txyw0"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_vc5cj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_nvyfr"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ty1g6"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j2jfr"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_bjg73"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bu4jf"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_o7ddy"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0loja"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ids8r"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dnhof"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_1v6qk"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_augu2"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_tm6hj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kf5aa"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_t5ykj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_e755i"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ro3en"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_od4ux"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_xhfw6"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1epgm"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_152kg"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r4e17"]
+resource_local_to_scene = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_y57op"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mlv25"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_a82wo"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_gdvew"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_kjtvk"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xrs0c"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_xljpf"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j4bwh"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ksmap"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ygd8o"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_2s0kr"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_xaipn"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ndrjj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ih3m7"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_11yus"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_b6ruc"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_155or"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtx2l"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_63lxy"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_fjhjs"]
+resource_local_to_scene = true
+radius = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_bfu41"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+radius = 1.0
+height = 2.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
+size = Vector3(3, 1, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jbj1t"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(3, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_muem4"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dp3eg"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6deb"]
+resource_local_to_scene = true
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_og1vs"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2wyq8"]
+resource_local_to_scene = true
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vxglm"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2f3dj"]
+resource_local_to_scene = true
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fv21b"]
+resource_local_to_scene = true
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tel4y"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 200, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkpxi"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5q0nq"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dgi5k"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j8jky"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kmb1v"]
+resource_local_to_scene = true
+size = Vector3(50, 5, 30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fuf3a"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(50, 5, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pibwh"]
+resource_local_to_scene = true
+size = Vector3(79.01, 5, 30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6pm6"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(79.01, 5, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5he1u"]
+resource_local_to_scene = true
+size = Vector3(30, 5, 30)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5poiv"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(30, 5, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2cjbq"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_chjal"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cjqg0"]
+resource_local_to_scene = true
+size = Vector3(15, 71.87, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vchkt"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 71.87, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_txyw0"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vc5cj"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvyfr"]
+resource_local_to_scene = true
+size = Vector3(15, 50, 20)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ty1g6"]
+resource_local_to_scene = true
+material = ExtResource("4_o6xl0")
+size = Vector3(15, 50, 20)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -66,16 +1008,144 @@ lightmap_size_hint = Vector2i(5002, 5002)
 material = ExtResource("4_jyhfs")
 size = Vector2(1000, 1000)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_tefeu"]
-size = Vector3(1, 10, 10)
-
-[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
-size = Vector3(1, 10, 10)
-
 [node name="Main" type="Node3D"]
+script = ExtResource("1_tefeu")
 
-[node name="Player" parent="." instance=ExtResource("1_jyhfs")]
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.1263, 0)
+
+[node name="Player1" parent="." instance=ExtResource("1_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.0612, 0)
+
+[node name="PlayerHUD" type="CanvasLayer" parent="."]
+
+[node name="Crosshair" type="Control" parent="PlayerHUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="PlayerHUD/Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jkv2x")
+
+[node name="NetworkUI" type="Control" parent="PlayerHUD"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_tbgi4")
+
+[node name="NetworkTab" type="HFlowContainer" parent="PlayerHUD/NetworkUI"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 58.0
+
+[node name="Choose Network Type" type="Label" parent="PlayerHUD/NetworkUI/NetworkTab"]
+layout_mode = 2
+text = "Choose a network type:"
+
+[node name="Enet" type="Button" parent="PlayerHUD/NetworkUI/NetworkTab"]
+layout_mode = 2
+text = "Enet"
+
+[node name="Steam" type="Button" parent="PlayerHUD/NetworkUI/NetworkTab"]
+layout_mode = 2
+text = "Steam"
+
+[node name="EnetConnectTab" type="HFlowContainer" parent="PlayerHUD/NetworkUI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 149.0
+offset_bottom = 66.0
+
+[node name="IP" type="LineEdit" parent="PlayerHUD/NetworkUI/EnetConnectTab"]
+layout_mode = 2
+placeholder_text = "IP Address"
+expand_to_text_length = true
+
+[node name="Join" type="Button" parent="PlayerHUD/NetworkUI/EnetConnectTab"]
+layout_mode = 2
+text = "Join
+"
+
+[node name="Host" type="Button" parent="PlayerHUD/NetworkUI/EnetConnectTab"]
+layout_mode = 2
+text = "Host"
+
+[node name="Back" type="Button" parent="PlayerHUD/NetworkUI/EnetConnectTab"]
+layout_mode = 2
+text = "Back"
+
+[node name="SteamLobbyBrowser" type="HFlowContainer" parent="PlayerHUD/NetworkUI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 249.0
+offset_bottom = 66.0
+
+[node name="SteamLobbyList" type="VBoxContainer" parent="PlayerHUD/NetworkUI/SteamLobbyBrowser"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PlayerHUD/NetworkUI/SteamLobbyBrowser/SteamLobbyList"]
+layout_mode = 2
+text = "Lobby Name: TEST | Players: 1/4"
+
+[node name="Host" type="Button" parent="PlayerHUD/NetworkUI/SteamLobbyBrowser"]
+layout_mode = 2
+text = "Host"
+
+[node name="Back" type="Button" parent="PlayerHUD/NetworkUI/SteamLobbyBrowser"]
+layout_mode = 2
+text = "Back"
+
+[node name="LobbyTab" type="HFlowContainer" parent="PlayerHUD/NetworkUI"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 241.0
+offset_bottom = 190.0
+
+[node name="NetworkID" type="Label" parent="PlayerHUD/NetworkUI/LobbyTab"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Network ID: 3204594532"
+
+[node name="LobbyID" type="Label" parent="PlayerHUD/NetworkUI/LobbyTab"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lobby ID: 127.0.0.1"
+
+[node name="ConnectedPlayers" type="Label" parent="PlayerHUD/NetworkUI/LobbyTab"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Connected Players:
+Player1
+Player2
+Player3"
+
+[node name="Disconnect" type="Button" parent="PlayerHUD/NetworkUI/LobbyTab"]
+layout_mode = 2
+text = "Disconnect"
 
 [node name="Obstacles" type="Node" parent="."]
 
@@ -83,57 +1153,1457 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.0612, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.5571, 0)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_jyhfs")
+shape = SubResource("BoxShape3D_o6xl0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
-[node name="@CollisionShape3D@28151" type="CollisionShape3D" parent="Obstacles/Start"]
-shape = SubResource("BoxShape3D_jyhfs")
+[node name="@CollisionShape3D@167236" type="CollisionShape3D" parent="Obstacles/Start"]
+shape = SubResource("BoxShape3D_o6xl0")
 
-[node name="@MeshInstance3D@28152" type="MeshInstance3D" parent="Obstacles/Start"]
-mesh = SubResource("BoxMesh_tefeu")
+[node name="@MeshInstance3D@167237" type="MeshInstance3D" parent="Obstacles/Start"]
+mesh = SubResource("BoxMesh_tipki")
+
+[node name="Start2" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.918564, 0, 0.395273, 0, 1, 0, -0.395273, 0, 0.918564, 13.5242, 20.6911, 14.7005)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_tefeu")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start2"]
+shape = SubResource("BoxShape3D_tefeu")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start2"]
+mesh = SubResource("BoxMesh_o6xl0")
+
+[node name="Start4" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.988759, 0, -0.149518, 0, 1, 0, 0.149518, 0, 0.988759, -10.8762, 25.841, 18.2712)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_tipki")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start4"]
+shape = SubResource("BoxShape3D_tipki")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start4"]
+mesh = SubResource("BoxMesh_85g3d")
+
+[node name="Start5" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.464208, 0, -0.885726, 0, 1, 0, 0.885726, 0, 0.464208, 12.7724, 33.2671, -14.1229)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_choun")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start5"]
+shape = SubResource("BoxShape3D_choun")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start5"]
+mesh = SubResource("BoxMesh_ya4ey")
+
+[node name="Start6" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.426648, 0, -0.904418, 0, 1, 0, 0.904418, 0, -0.426648, -0.378666, 40.3417, -2.62055)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_eb6dy")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start6"]
+shape = SubResource("BoxShape3D_eb6dy")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start6"]
+mesh = SubResource("BoxMesh_trceg")
+
+[node name="Start7" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.426648, 0, -0.904418, 0, 1, 0, 0.904418, 0, -0.426648, -36.1376, 12.7095, 23.9297)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_a8y0u")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start7"]
+shape = SubResource("BoxShape3D_a8y0u")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start7"]
+mesh = SubResource("BoxMesh_jkv2x")
+
+[node name="Start8" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.955479, 0, -0.295058, 0, 1, 0, 0.295058, 0, -0.955479, -53.1392, 27.8451, -18.88)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_jbj1t")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start8"]
+shape = SubResource("BoxShape3D_jbj1t")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start8"]
+mesh = SubResource("BoxMesh_muem4")
+
+[node name="Start9" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 12.0847, 27.8451, 51.4077)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_dp3eg")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start9"]
+shape = SubResource("BoxShape3D_dp3eg")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start9"]
+mesh = SubResource("BoxMesh_0ld40")
+
+[node name="Start10" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 30.0327, 17.6866, 47.5721)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_gqmmt")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start10"]
+shape = SubResource("BoxShape3D_gqmmt")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start10"]
+mesh = SubResource("BoxMesh_yc10j")
+
+[node name="Start38" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 9.0225, 4.94191, 56.4789)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_j2jfr")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start38"]
+shape = SubResource("BoxShape3D_j2jfr")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start38"]
+mesh = SubResource("BoxMesh_bjg73")
+
+[node name="Start39" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 35.5129, 7.91981, 63.258)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_bu4jf")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start39"]
+shape = SubResource("BoxShape3D_bu4jf")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start39"]
+mesh = SubResource("BoxMesh_o7ddy")
+
+[node name="Start40" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, -13.0996, 2.47668, 49.1831)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_0loja")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start40"]
+shape = SubResource("BoxShape3D_0loja")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start40"]
+mesh = SubResource("BoxMesh_ids8r")
+
+[node name="Start41" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 8.72105, 9.2036, 27.4198)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_dnhof")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start41"]
+shape = SubResource("BoxShape3D_dnhof")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start41"]
+mesh = SubResource("BoxMesh_1v6qk")
+
+[node name="Start3" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.54093, 0, -0.841067, 0, 1, 0, 0.841067, 0, 0.54093, -13.1455, 11.426, -10.3219)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_jscy8")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start3"]
+shape = SubResource("BoxShape3D_jscy8")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start3"]
+mesh = SubResource("BoxMesh_pm3ni")
 
 [node name="End" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2825, 49.902, 9.15634)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_o6xl0")
+shape = SubResource("BoxShape3D_85g3d")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
-[node name="@CollisionShape3D@29672" type="CollisionShape3D" parent="Obstacles/End"]
-shape = SubResource("BoxShape3D_o6xl0")
+[node name="@CollisionShape3D@167238" type="CollisionShape3D" parent="Obstacles/End"]
+shape = SubResource("BoxShape3D_85g3d")
 
-[node name="@MeshInstance3D@29673" type="MeshInstance3D" parent="Obstacles/End"]
-mesh = SubResource("BoxMesh_tipki")
+[node name="@MeshInstance3D@167239" type="MeshInstance3D" parent="Obstacles/End"]
+mesh = SubResource("BoxMesh_choun")
+
+[node name="Start11" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.24639, 0, 0.969171, 0, 1, 0, -0.969171, 0, 0.24639, 7.44934, 41.202, -2.23643)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_ya4ey")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start11"]
+shape = SubResource("BoxShape3D_ya4ey")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start11"]
+mesh = SubResource("BoxMesh_eb6dy")
+
+[node name="Start12" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.721108, 0, 0.692823, 0, 1, 0, -0.692823, 0, 0.721108, -4.58955, 46.3519, 19.2856)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_trceg")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start12"]
+shape = SubResource("BoxShape3D_trceg")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start12"]
+mesh = SubResource("BoxMesh_a8y0u")
+
+[node name="Start13" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.985145, 0, -0.171723, 0, 1, 0, 0.171723, 0, 0.985145, -15.8616, 53.778, -19.2056)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_0ld40")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start13"]
+shape = SubResource("BoxShape3D_0ld40")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start13"]
+mesh = SubResource("BoxMesh_gqmmt")
+
+[node name="Start14" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.457067, 0, -0.889432, 0, 1, 0, 0.889432, 0, 0.457067, -14.7563, 60.8526, -1.76912)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_yc10j")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start14"]
+shape = SubResource("BoxShape3D_yc10j")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start14"]
+mesh = SubResource("BoxMesh_jscy8")
+
+[node name="Start15" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.457067, 0, -0.889432, 0, 1, 0, 0.889432, 0, 0.457067, -15.4977, 33.2204, 42.7625)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_pm3ni")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start15"]
+shape = SubResource("BoxShape3D_pm3ni")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start15"]
+mesh = SubResource("BoxMesh_y6deb")
+
+[node name="Start16" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.348343, 0, -0.937367, 0, 1, 0, 0.937367, 0, -0.348343, -59.8006, 48.356, 30.1535)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_og1vs")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start16"]
+shape = SubResource("BoxShape3D_og1vs")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start16"]
+mesh = SubResource("BoxMesh_2wyq8")
+
+[node name="Start17" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 35.6755, 48.356, 21.2747)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_vxglm")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start17"]
+shape = SubResource("BoxShape3D_vxglm")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start17"]
+mesh = SubResource("BoxMesh_2f3dj")
+
+[node name="Start18" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 43.5722, 38.1975, 4.70717)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_yq6so")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start18"]
+shape = SubResource("BoxShape3D_yq6so")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start18"]
+mesh = SubResource("BoxMesh_fv21b")
+
+[node name="Start19" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.996493, 0, -0.0836778, 0, 1, 0, 0.0836778, 0, 0.996493, -28.6426, 31.9369, 3.65984)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_tel4y")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start19"]
+shape = SubResource("BoxShape3D_tel4y")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start19"]
+mesh = SubResource("BoxMesh_qkpxi")
+
+[node name="End2" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.609412, 0, 0.792854, 0, 1, 0, -0.792854, 0, 0.609412, 17.5322, 70.4129, -24.4519)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_5q0nq")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167238" type="CollisionShape3D" parent="Obstacles/End2"]
+shape = SubResource("BoxShape3D_5q0nq")
+
+[node name="_MeshInstance3D_167239" type="MeshInstance3D" parent="Obstacles/End2"]
+mesh = SubResource("BoxMesh_dgi5k")
+
+[node name="Start20" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.934615, 0, -0.355662, 0, 1, 0, 0.355662, 0, 0.934615, -7.06715, 54.3896, 42.2338)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_j8jky")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start20"]
+shape = SubResource("BoxShape3D_j8jky")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start20"]
+mesh = SubResource("BoxMesh_kmb1v")
+
+[node name="Start21" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.605766, 0, -0.795643, 0, 1, 0, 0.795643, 0, 0.605766, -27.0703, 59.5395, 27.8114)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_fuf3a")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start21"]
+shape = SubResource("BoxShape3D_fuf3a")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start21"]
+mesh = SubResource("BoxMesh_pibwh")
+
+[node name="Start22" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.283312, 0, -0.959028, 0, 1, 0, 0.959028, 0, -0.283312, 12.4578, 66.9657, 21.0174)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_c6pm6")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start22"]
+shape = SubResource("BoxShape3D_c6pm6")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start22"]
+mesh = SubResource("BoxMesh_5he1u")
+
+[node name="Start23" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.935888, 0, -0.352299, 0, 1, 0, 0.352299, 0, -0.935888, -4.99068, 74.0403, 20.1205)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_5poiv")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start23"]
+shape = SubResource("BoxShape3D_5poiv")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start23"]
+mesh = SubResource("BoxMesh_2cjbq")
+
+[node name="Start24" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.935888, 0, -0.352299, 0, 1, 0, 0.352299, 0, -0.935888, -49.145, 46.4081, 14.2887)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_chjal")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start24"]
+shape = SubResource("BoxShape3D_chjal")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start24"]
+mesh = SubResource("BoxMesh_cjqg0")
+
+[node name="Start25" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.891355, 0, 0.453306, 0, 1, 0, -0.453306, 0, -0.891355, -31.5498, 61.5436, -28.2805)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_vchkt")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start25"]
+shape = SubResource("BoxShape3D_vchkt")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start25"]
+mesh = SubResource("BoxMesh_txyw0")
+
+[node name="Start26" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.973794, 0, -0.227433, 0, 1, 0, 0.227433, 0, -0.973794, -33.6535, 61.5436, 67.5845)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_vc5cj")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start26"]
+shape = SubResource("BoxShape3D_vc5cj")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start26"]
+mesh = SubResource("BoxMesh_nvyfr")
+
+[node name="Start27" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.973794, 0, -0.227433, 0, 1, 0, 0.227433, 0, -0.973794, -18.0982, 51.3851, 77.3249)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_ty1g6")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start27"]
+shape = SubResource("BoxShape3D_ty1g6")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start27"]
+mesh = SubResource("BoxMesh_j2jfr")
+
+[node name="Start28" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.197144, 0, -0.980375, 0, 1, 0, 0.980375, 0, -0.197144, -8.79516, 45.1245, 5.70416)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_bjg73")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start28"]
+shape = SubResource("BoxShape3D_bjg73")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start28"]
+mesh = SubResource("BoxMesh_bu4jf")
+
+[node name="End3" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.71792, 0, -0.696126, 0, 1, 0, 0.696126, 0, 0.71792, 13.8488, 83.6005, 54.7922)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_o7ddy")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167238" type="CollisionShape3D" parent="Obstacles/End3"]
+shape = SubResource("BoxShape3D_o7ddy")
+
+[node name="_MeshInstance3D_167239" type="MeshInstance3D" parent="Obstacles/End3"]
+mesh = SubResource("BoxMesh_0loja")
+
+[node name="Start29" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.118612, 0, -0.992941, 0, 1, 0, 0.992941, 0, -0.118612, -76.1708, 54.3896, 16.2531)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_ids8r")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start29"]
+shape = SubResource("BoxShape3D_ids8r")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start29"]
+mesh = SubResource("BoxMesh_dnhof")
+
+[node name="Start30" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.625161, 0, -0.780496, 0, 1, 0, 0.780496, 0, -0.625161, -67.0249, 59.5395, -6.6485)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_1v6qk")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start30"]
+shape = SubResource("BoxShape3D_1v6qk")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start30"]
+mesh = SubResource("BoxMesh_augu2")
+
+[node name="Start31" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.999096, 0, 0.0425034, 0, 1, 0, -0.0425034, 0, -0.999096, -50.8559, 66.9657, 30.0557)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_tm6hj")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start31"]
+shape = SubResource("BoxShape3D_tm6hj")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start31"]
+mesh = SubResource("BoxMesh_kf5aa")
+
+[node name="Start32" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.568562, 0, 0.822641, 0, 1, 0, -0.822641, 0, -0.568562, -54.2133, 74.0403, 12.9098)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_t5ykj")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start32"]
+shape = SubResource("BoxShape3D_t5ykj")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start32"]
+mesh = SubResource("BoxMesh_e755i")
+
+[node name="Start33" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.568562, 0, 0.822641, 0, 1, 0, -0.822641, 0, -0.568562, -59.2537, 46.4081, -31.3419)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_ro3en")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start33"]
+shape = SubResource("BoxShape3D_ro3en")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start33"]
+mesh = SubResource("BoxMesh_od4ux")
+
+[node name="Start34" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.223828, 0, 0.974628, 0, 1, 0, -0.974628, 0, 0.223828, -13.6897, 61.5436, -24.5853)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_xhfw6")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start34"]
+shape = SubResource("BoxShape3D_xhfw6")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start34"]
+mesh = SubResource("BoxMesh_1epgm")
+
+[node name="Start35" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.456601, 0, 0.889672, 0, 1, 0, -0.889672, 0, -0.456601, -107.208, 61.5436, -3.39868)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_152kg")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start35"]
+shape = SubResource("BoxShape3D_152kg")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start35"]
+mesh = SubResource("BoxMesh_r4e17")
+
+[node name="Start36" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.456601, 0, 0.889672, 0, 1, 0, -0.889672, 0, -0.456601, -112.889, 51.3851, 14.0531)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_y57op")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start36"]
+shape = SubResource("BoxShape3D_y57op")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start36"]
+mesh = SubResource("BoxMesh_mlv25")
+
+[node name="Start37" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.998929, 0, -0.0462696, 0, 1, 0, 0.0462696, 0, -0.998929, -41.1484, 45.1245, 5.72567)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_a82wo")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167236" type="CollisionShape3D" parent="Obstacles/Start37"]
+shape = SubResource("BoxShape3D_a82wo")
+
+[node name="_MeshInstance3D_167237" type="MeshInstance3D" parent="Obstacles/Start37"]
+mesh = SubResource("BoxMesh_gdvew")
+
+[node name="End4" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.501435, 0, -0.865195, 0, 1, 0, 0.865195, 0, -0.501435, -83.2873, 83.6005, 39.5887)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_kjtvk")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167238" type="CollisionShape3D" parent="Obstacles/End4"]
+shape = SubResource("BoxShape3D_kjtvk")
+
+[node name="_MeshInstance3D_167239" type="MeshInstance3D" parent="Obstacles/End4"]
+mesh = SubResource("BoxMesh_xrs0c")
 
 [node name="GrapplePoint" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80423, 22.9795, 3.39231)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_85g3d")
+shape = SubResource("SphereShape3D_ya4ey")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
-[node name="@CollisionShape3D@30734" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
-shape = SubResource("SphereShape3D_85g3d")
+[node name="@CollisionShape3D@167240" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
+shape = SubResource("SphereShape3D_ya4ey")
 
-[node name="@MeshInstance3D@30735" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
-mesh = SubResource("SphereMesh_choun")
+[node name="@MeshInstance3D@167241" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
+mesh = SubResource("SphereMesh_eb6dy")
 
 [node name="GrapplePoint2" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 11.6692)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_ya4ey")
+shape = SubResource("SphereShape3D_trceg")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
 
-[node name="@CollisionShape3D@32245" type="CollisionShape3D" parent="Obstacles/GrapplePoint2"]
-shape = SubResource("SphereShape3D_ya4ey")
+[node name="@CollisionShape3D@167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint2"]
+shape = SubResource("SphereShape3D_trceg")
 
-[node name="@MeshInstance3D@32246" type="MeshInstance3D" parent="Obstacles/GrapplePoint2"]
-mesh = SubResource("SphereMesh_jyhfs")
+[node name="@MeshInstance3D@167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint2"]
+mesh = SubResource("SphereMesh_a8y0u")
+
+[node name="GrapplePoint18" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 28.5624)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_tefeu")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint18"]
+shape = SubResource("SphereShape3D_tefeu")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint18"]
+mesh = SubResource("SphereMesh_o6xl0")
+
+[node name="GrapplePoint19" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93121, 27.5977, 28.5624)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_tipki")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint19"]
+shape = SubResource("SphereShape3D_tipki")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint19"]
+mesh = SubResource("SphereMesh_85g3d")
+
+[node name="GrapplePoint20" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93121, 54.1507, 28.5624)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_choun")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint20"]
+shape = SubResource("SphereShape3D_choun")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint20"]
+mesh = SubResource("SphereMesh_ya4ey")
+
+[node name="GrapplePoint21" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4112, 54.1507, 28.5624)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_eb6dy")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint21"]
+shape = SubResource("SphereShape3D_eb6dy")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint21"]
+mesh = SubResource("SphereMesh_trceg")
+
+[node name="GrapplePoint22" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4112, 54.1507, 8.19061)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_a8y0u")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint22"]
+shape = SubResource("SphereShape3D_a8y0u")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint22"]
+mesh = SubResource("SphereMesh_jkv2x")
+
+[node name="GrapplePoint23" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.701324, 54.1507, 51.2929)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_jbj1t")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint23"]
+shape = SubResource("SphereShape3D_jbj1t")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint23"]
+mesh = SubResource("SphereMesh_muem4")
+
+[node name="GrapplePoint24" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5025, 71.0601, 51.2929)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_dp3eg")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint24"]
+shape = SubResource("SphereShape3D_dp3eg")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint24"]
+mesh = SubResource("SphereMesh_0ld40")
+
+[node name="GrapplePoint25" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6081, 71.0601, 58.9655)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_gqmmt")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint25"]
+shape = SubResource("SphereShape3D_gqmmt")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint25"]
+mesh = SubResource("SphereMesh_yc10j")
+
+[node name="GrapplePoint26" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5905, 71.1356, 4.61954)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_jscy8")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint26"]
+shape = SubResource("SphereShape3D_jscy8")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint26"]
+mesh = SubResource("SphereMesh_pm3ni")
+
+[node name="GrapplePoint27" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 13.1949, 29.4801, 9.07267)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_y6deb")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167240" type="CollisionShape3D" parent="Obstacles/GrapplePoint27"]
+shape = SubResource("SphereShape3D_y6deb")
+
+[node name="_MeshInstance3D_167241" type="MeshInstance3D" parent="Obstacles/GrapplePoint27"]
+mesh = SubResource("SphereMesh_og1vs")
+
+[node name="GrapplePoint28" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 21.1222, 34.0983, 28.1882)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_2wyq8")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint28"]
+shape = SubResource("SphereShape3D_2wyq8")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint28"]
+mesh = SubResource("SphereMesh_vxglm")
+
+[node name="GrapplePoint29" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 9.40845, 34.0983, 40.3606)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_2f3dj")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint29"]
+shape = SubResource("SphereShape3D_2f3dj")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint29"]
+mesh = SubResource("SphereMesh_yq6so")
+
+[node name="GrapplePoint30" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 34.0983, 23.83)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_fv21b")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint30"]
+shape = SubResource("SphereShape3D_fv21b")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint30"]
+mesh = SubResource("SphereMesh_tel4y")
+
+[node name="GrapplePoint31" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 60.6514, 23.83)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_qkpxi")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint31"]
+shape = SubResource("SphereShape3D_qkpxi")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint31"]
+mesh = SubResource("SphereMesh_5q0nq")
+
+[node name="GrapplePoint32" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -28.1915, 60.6514, 4.17739)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_dgi5k")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint32"]
+shape = SubResource("SphereShape3D_dgi5k")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint32"]
+mesh = SubResource("SphereMesh_j8jky")
+
+[node name="GrapplePoint33" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -14.0656, 60.6514, -10.5015)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_kmb1v")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint33"]
+shape = SubResource("SphereShape3D_kmb1v")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint33"]
+mesh = SubResource("SphereMesh_fuf3a")
+
+[node name="GrapplePoint34" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -25.1375, 60.6514, 38.6623)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_pibwh")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint34"]
+shape = SubResource("SphereShape3D_pibwh")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint34"]
+mesh = SubResource("SphereMesh_c6pm6")
+
+[node name="GrapplePoint35" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -44.0187, 77.5607, 20.4925)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_5he1u")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint35"]
+shape = SubResource("SphereShape3D_5he1u")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint35"]
+mesh = SubResource("SphereMesh_5poiv")
+
+[node name="GrapplePoint36" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -17.5549, 77.5607, 56.6074)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_2cjbq")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint36"]
+shape = SubResource("SphereShape3D_2cjbq")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint36"]
+mesh = SubResource("SphereMesh_chjal")
+
+[node name="GrapplePoint37" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -13.8803, 77.6362, -15.2792)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_cjqg0")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint37"]
+shape = SubResource("SphereShape3D_cjqg0")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint37"]
+mesh = SubResource("SphereMesh_vchkt")
+
+[node name="GrapplePoint38" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 13.1949, 82.6241, 9.07267)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_txyw0")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167240" type="CollisionShape3D" parent="Obstacles/GrapplePoint38"]
+shape = SubResource("SphereShape3D_txyw0")
+
+[node name="_MeshInstance3D_167241" type="MeshInstance3D" parent="Obstacles/GrapplePoint38"]
+mesh = SubResource("SphereMesh_vc5cj")
+
+[node name="GrapplePoint39" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 21.1222, 87.2423, 28.1882)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_nvyfr")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint39"]
+shape = SubResource("SphereShape3D_nvyfr")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint39"]
+mesh = SubResource("SphereMesh_ty1g6")
+
+[node name="GrapplePoint40" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 9.40845, 87.2423, 40.3606)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_j2jfr")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint40"]
+shape = SubResource("SphereShape3D_j2jfr")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint40"]
+mesh = SubResource("SphereMesh_bjg73")
+
+[node name="GrapplePoint41" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 87.2423, 23.83)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_bu4jf")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint41"]
+shape = SubResource("SphereShape3D_bu4jf")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint41"]
+mesh = SubResource("SphereMesh_o7ddy")
+
+[node name="GrapplePoint42" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 113.795, 23.83)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_0loja")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint42"]
+shape = SubResource("SphereShape3D_0loja")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint42"]
+mesh = SubResource("SphereMesh_ids8r")
+
+[node name="GrapplePoint43" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -28.1915, 113.795, 4.17739)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_dnhof")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint43"]
+shape = SubResource("SphereShape3D_dnhof")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint43"]
+mesh = SubResource("SphereMesh_1v6qk")
+
+[node name="GrapplePoint44" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -14.0656, 113.795, -10.5015)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_augu2")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint44"]
+shape = SubResource("SphereShape3D_augu2")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint44"]
+mesh = SubResource("SphereMesh_tm6hj")
+
+[node name="GrapplePoint45" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -25.1375, 113.795, 38.6623)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_kf5aa")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint45"]
+shape = SubResource("SphereShape3D_kf5aa")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint45"]
+mesh = SubResource("SphereMesh_t5ykj")
+
+[node name="GrapplePoint46" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -44.0187, 130.705, 20.4925)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_e755i")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint46"]
+shape = SubResource("SphereShape3D_e755i")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint46"]
+mesh = SubResource("SphereMesh_ro3en")
+
+[node name="GrapplePoint47" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -17.5549, 130.705, 56.6074)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_od4ux")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint47"]
+shape = SubResource("SphereShape3D_od4ux")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint47"]
+mesh = SubResource("SphereMesh_xhfw6")
+
+[node name="GrapplePoint48" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -13.8803, 130.78, -15.2792)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_1epgm")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint48"]
+shape = SubResource("SphereShape3D_1epgm")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint48"]
+mesh = SubResource("SphereMesh_152kg")
+
+[node name="GrapplePoint49" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 47.159, 82.6241, -6.45303)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_r4e17")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167240" type="CollisionShape3D" parent="Obstacles/GrapplePoint49"]
+shape = SubResource("SphereShape3D_r4e17")
+
+[node name="_MeshInstance3D_167241" type="MeshInstance3D" parent="Obstacles/GrapplePoint49"]
+mesh = SubResource("SphereMesh_y57op")
+
+[node name="GrapplePoint50" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 61.7329, 87.2423, 8.23876)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_mlv25")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint50"]
+shape = SubResource("SphereShape3D_mlv25")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint50"]
+mesh = SubResource("SphereMesh_a82wo")
+
+[node name="GrapplePoint51" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 55.499, 87.2423, 23.9397)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_gdvew")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint51"]
+shape = SubResource("SphereShape3D_gdvew")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint51"]
+mesh = SubResource("SphereMesh_kjtvk")
+
+[node name="GrapplePoint52" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 33.3418, 87.2423, 15.1424)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_xrs0c")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint52"]
+shape = SubResource("SphereShape3D_xrs0c")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint52"]
+mesh = SubResource("SphereMesh_xljpf")
+
+[node name="GrapplePoint53" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 33.3418, 113.795, 15.1424)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_j4bwh")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint53"]
+shape = SubResource("SphereShape3D_j4bwh")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint53"]
+mesh = SubResource("SphereMesh_ksmap")
+
+[node name="GrapplePoint54" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 6.99973, 113.795, 4.68357)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_ygd8o")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint54"]
+shape = SubResource("SphereShape3D_ygd8o")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint54"]
+mesh = SubResource("SphereMesh_2s0kr")
+
+[node name="GrapplePoint55" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 14.5173, 113.795, -14.2504)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_xaipn")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint55"]
+shape = SubResource("SphereShape3D_xaipn")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint55"]
+mesh = SubResource("SphereMesh_ndrjj")
+
+[node name="GrapplePoint56" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 22.8813, 113.795, 35.4458)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_ih3m7")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint56"]
+shape = SubResource("SphereShape3D_ih3m7")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint56"]
+mesh = SubResource("SphereMesh_11yus")
+
+[node name="GrapplePoint57" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, -1.47311, 130.705, 25.7761)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_b6ruc")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint57"]
+shape = SubResource("SphereShape3D_b6ruc")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint57"]
+mesh = SubResource("SphereMesh_155or")
+
+[node name="GrapplePoint58" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 36.693, 130.705, 49.1848)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_vtx2l")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint58"]
+shape = SubResource("SphereShape3D_vtx2l")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint58"]
+mesh = SubResource("SphereMesh_63lxy")
+
+[node name="GrapplePoint59" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 12.8801, 130.78, -18.7427)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("SphereShape3D_fjhjs")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167242" type="CollisionShape3D" parent="Obstacles/GrapplePoint59"]
+shape = SubResource("SphereShape3D_fjhjs")
+
+[node name="_MeshInstance3D_167243" type="MeshInstance3D" parent="Obstacles/GrapplePoint59"]
+mesh = SubResource("SphereMesh_bfu41")
+
+[node name="GrapplePoint3" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -5.78945, 14.501, 0)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_jkv2x")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="@CollisionShape3D@167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint3"]
+shape = SubResource("BoxShape3D_jkv2x")
+
+[node name="@MeshInstance3D@167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint3"]
+mesh = SubResource("BoxMesh_jbj1t")
+
+[node name="GrapplePoint4" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4558, -4.86648, 0)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_muem4")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint4"]
+shape = SubResource("BoxShape3D_muem4")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint4"]
+mesh = SubResource("BoxMesh_dp3eg")
+
+[node name="GrapplePoint5" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.873976, 0, -0.485969, 0, 1, 0, 0.485969, 0, -0.873976, 0.962494, 82.7329, -75.0683)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_y6deb")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint5"]
+shape = SubResource("BoxShape3D_y6deb")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint5"]
+mesh = SubResource("BoxMesh_og1vs")
+
+[node name="GrapplePoint11" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.99926, 0, -0.038475, 0, 1, 0, 0.038475, 0, 0.99926, 98.237, 18.8102, -8.35308)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_2wyq8")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint11"]
+shape = SubResource("BoxShape3D_2wyq8")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint11"]
+mesh = SubResource("BoxMesh_vxglm")
+
+[node name="GrapplePoint12" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.951728, 0, 0.306941, 0, 1, 0, -0.306941, 0, 0.951728, -13.4001, 53.9273, 110.413)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_2f3dj")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint12"]
+shape = SubResource("BoxShape3D_2f3dj")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint12"]
+mesh = SubResource("BoxMesh_yq6so")
+
+[node name="GrapplePoint13" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.738891, 0, -0.673825, 0, 1, 0, 0.673825, 0, -0.738891, -125.383, -2.71513, -35.9298)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_fv21b")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint13"]
+shape = SubResource("BoxShape3D_fv21b")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint13"]
+mesh = SubResource("BoxMesh_tel4y")
+
+[node name="GrapplePoint6" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.0405502, 0, 0.999177, 0, 1, 0, -0.999177, 0, 0.0405502, -36.1852, 12.2696, 60.0506)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_qkpxi")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint6"]
+shape = SubResource("BoxShape3D_qkpxi")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint6"]
+mesh = SubResource("BoxMesh_5q0nq")
+
+[node name="GrapplePoint14" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.318777, 0, 0.94783, 0, 1, 0, -0.94783, 0, 0.318777, -62.9444, 99.678, 79.1741)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_dgi5k")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint14"]
+shape = SubResource("BoxShape3D_dgi5k")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint14"]
+mesh = SubResource("BoxMesh_j8jky")
+
+[node name="GrapplePoint15" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.318777, 0, 0.94783, 0, 1, 0, -0.94783, 0, 0.318777, 79.3864, 99.678, 59.7929)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_kmb1v")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint15"]
+shape = SubResource("BoxShape3D_kmb1v")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint15"]
+mesh = SubResource("BoxMesh_fuf3a")
+
+[node name="GrapplePoint16" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.431314, 0, -0.902202, 0, 1, 0, 0.902202, 0, 0.431314, 54.2711, 99.678, -101.547)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_pibwh")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint16"]
+shape = SubResource("BoxShape3D_pibwh")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint16"]
+mesh = SubResource("BoxMesh_c6pm6")
+
+[node name="GrapplePoint17" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.431314, 0, -0.902202, 0, 1, 0, 0.902202, 0, 0.431314, -30.0338, 99.678, 13.2611)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_5he1u")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint17"]
+shape = SubResource("BoxShape3D_5he1u")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint17"]
+mesh = SubResource("BoxMesh_5poiv")
+
+[node name="GrapplePoint7" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(-0.365039, 0, 0.930992, 0, 1, 0, -0.930992, 0, -0.365039, -76.4583, 151.044, 28.8153)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_2cjbq")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint7"]
+shape = SubResource("BoxShape3D_2cjbq")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint7"]
+mesh = SubResource("BoxMesh_chjal")
+
+[node name="GrapplePoint8" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.661875, 0, -0.749614, 0, 1, 0, 0.749614, 0, 0.661875, 49.3783, 32.886, -30.3784)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_cjqg0")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint8"]
+shape = SubResource("BoxShape3D_cjqg0")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint8"]
+mesh = SubResource("BoxMesh_vchkt")
+
+[node name="GrapplePoint9" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.893802, 0, 0.448461, 0, 1, 0, -0.448461, 0, 0.893802, 32.29, 62.6002, 39.1964)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_txyw0")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint9"]
+shape = SubResource("BoxShape3D_txyw0")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint9"]
+mesh = SubResource("BoxMesh_vc5cj")
+
+[node name="GrapplePoint10" type="StaticBody3D" parent="Obstacles"]
+transform = Transform3D(0.517235, 0, 0.855843, 0, 1, 0, -0.855843, 0, 0.517235, -44.7088, 23.8768, -47.6525)
+collision_layer = 3
+script = ExtResource("3_tefeu")
+shape = SubResource("BoxShape3D_nvyfr")
+metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
+metadata/_edit_group_ = true
+
+[node name="_CollisionShape3D_167667" type="CollisionShape3D" parent="Obstacles/GrapplePoint10"]
+shape = SubResource("BoxShape3D_nvyfr")
+
+[node name="_MeshInstance3D_167668" type="MeshInstance3D" parent="Obstacles/GrapplePoint10"]
+mesh = SubResource("BoxMesh_ty1g6")
 
 [node name="Environment" type="Node" parent="."]
 
@@ -219,12 +2689,16 @@ You can only grapple on purple objects"
 font_size = 50
 outline_size = 127
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3928, 40.8665, 52.7417)
-metadata/_edit_group_ = true
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://dug4ymo133wxd")
+spawn_path = NodePath("..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/StaticBody3D"]
-shape = SubResource("BoxShape3D_tefeu")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/StaticBody3D"]
-mesh = SubResource("BoxMesh_tbgi4")
+[connection signal="pressed" from="PlayerHUD/NetworkUI/NetworkTab/Enet" to="PlayerHUD/NetworkUI" method="_on_enet_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/NetworkTab/Steam" to="PlayerHUD/NetworkUI" method="_on_steam_pressed"]
+[connection signal="text_submitted" from="PlayerHUD/NetworkUI/EnetConnectTab/IP" to="PlayerHUD/NetworkUI" method="_on_ip_text_submitted"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/EnetConnectTab/Join" to="PlayerHUD/NetworkUI" method="_on_join_enet_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/EnetConnectTab/Host" to="PlayerHUD/NetworkUI" method="_on_host_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/EnetConnectTab/Back" to="PlayerHUD/NetworkUI" method="_on_back_to_main_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/SteamLobbyBrowser/Host" to="PlayerHUD/NetworkUI" method="_on_host_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/SteamLobbyBrowser/Back" to="PlayerHUD/NetworkUI" method="_on_back_to_main_pressed"]
+[connection signal="pressed" from="PlayerHUD/NetworkUI/LobbyTab/Disconnect" to="PlayerHUD/NetworkUI" method="_on_back_to_main_pressed"]

@@ -30,12 +30,24 @@ var friction: float = 6.0
 
 @onready var head: Node3D = $Head
 @onready var player_camera: Camera3D = %PlayerCamera
+@onready var player_synchronizer: MultiplayerSynchronizer = %PlayerSynchronizer
 
 func _ready() -> void:
+	set_multiplayer_authority(name.to_int(), true)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	player_camera.fov = FOV
 
+	if Network.connected_players.has(name.to_int()):
+		%Name.text = Network.connected_players[name.to_int()].name
+	else:
+		%Name.text = Network.player_info.name
+
+	if player_synchronizer.is_multiplayer_authority():
+		player_camera.current = true
+
 func _physics_process(delta: float) -> void:
+	if not player_synchronizer.is_multiplayer_authority(): return
+
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
 
 	var wish_direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -84,6 +96,8 @@ func accelerate(wish_dir: Vector3, max_speed: float, delta):
 	return velocity + add_speed * wish_dir
 
 func _unhandled_input(event: InputEvent) -> void:
+	if not player_synchronizer.is_multiplayer_authority(): return
+
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		player_camera.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSITIVITY))
 		head.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSITIVITY))

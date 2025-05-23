@@ -16,6 +16,11 @@ run/main_scene="uid://cba18lb1adr66"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://globals/autoloads/global.gd"
+Network="*res://globals/autoloads/networking/network.gd"
+
 [input]
 
 forward={
