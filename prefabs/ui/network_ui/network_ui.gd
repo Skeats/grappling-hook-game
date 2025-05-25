@@ -58,8 +58,8 @@ func _on_back_to_main_pressed() -> void:
 
 # Enet Connection
 func _on_ip_text_submitted(new_text: String) -> void:
-	if ip.text:
-		Network.ip_address = ip.text
+	if new_text:
+		Network.ip_address = new_text
 	else:
 		Network.ip_address = "localhost"
 
@@ -84,7 +84,7 @@ func create_steam_lobby_list(lobbies: Array) -> void:
 		)
 		steam_lobby_list.add_child(button)
 
-func _update_lobby_info(opt_peer_id: int = 0, opt_player_info: Dictionary = {}) -> void:
+func _update_lobby_info(_peer_id: int, _player_info: Dictionary) -> void:
 	network_id.text = "Network ID: %s" % multiplayer.get_unique_id()
 	if Network.active_network_type == Network.MultiplayerNetworkType.ENET:
 		lobby_id.text = "Lobby ID: %s" % Network.ip_address

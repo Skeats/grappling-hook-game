@@ -42,7 +42,8 @@ func _exit_tree() -> void:
 		child.queue_free()
 
 func change_shape() -> void:
-	shape.changed.connect(update_appearance)
+	if not shape.changed.has_connections():
+		shape.changed.connect(update_appearance)
 	update_appearance()
 
 func update_appearance() -> void:

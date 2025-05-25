@@ -1,0 +1,128 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlwudafh5rhgf"]
+
+[ext_resource type="Script" uid="uid://briuvom7crbbn" path="res://prefabs/ui/crosshair/grappling_hook/grapple_hook.gd" id="1_6npc1"]
+[ext_resource type="Texture2D" uid="uid://bcol51dwjjwwl" path="res://prefabs/ui/crosshair/grappling_hook/grappling_hook_crosshair.svg" id="2_1gos2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykicj"]
+atlas = ExtResource("2_1gos2")
+region = Rect2(1, 1, 184, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gos2"]
+atlas = ExtResource("2_1gos2")
+region = Rect2(1, 1, 184, 254)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drey4"]
+atlas = ExtResource("2_1gos2")
+region = Rect2(187, 124, 68, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2405s"]
+atlas = ExtResource("2_1gos2")
+region = Rect2(187, 124, 68, 8)
+
+[node name="GrappleHook" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_6npc1")
+
+[node name="OuterElement" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LeftOuter" type="TextureRect" parent="OuterElement"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -32.5984
+offset_top = -22.5
+offset_bottom = 22.5
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_ykicj")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="RightOuter" type="TextureRect" parent="OuterElement"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -22.5
+offset_right = 32.5984
+offset_bottom = 22.5
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_1gos2")
+expand_mode = 3
+stretch_mode = 5
+flip_h = true
+
+[node name="InnerElement" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="LeftInner" type="TextureRect" parent="InnerElement"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -1.17647
+offset_bottom = 1.17647
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_drey4")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="RightInner" type="TextureRect" parent="InnerElement"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -1.17647
+offset_right = 20.0
+offset_bottom = 1.17647
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_2405s")
+expand_mode = 5
+stretch_mode = 5
+flip_h = true

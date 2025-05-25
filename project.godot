@@ -18,8 +18,22 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+SteamInfo="*res://addons/easy_peasy_multiplayer/steam_info.gd"
+Network="*res://addons/easy_peasy_multiplayer/networking/network.gd"
 Global="*res://globals/autoloads/global.gd"
-Network="*res://globals/autoloads/networking/network.gd"
+Panku="*res://addons/panku_console/console.tscn"
+
+[easy_peasy_multiplayer]
+
+general/verbose_network_logging=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/easy_peasy_multiplayer/plugin.cfg", "res://addons/panku_console/plugin.cfg")
+
+[global_group]
+
+Crosshairs=""
 
 [input]
 

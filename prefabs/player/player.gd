@@ -6,24 +6,29 @@ const MAX_ACCELERATION = 10 * MAX_SPEED_GROUND
 const GRAVITY = 15.34
 const STOP_SPEED = 2.5
 const JUMP_IMPULSE = sqrt(2 * GRAVITY * 0.85)
-const JUMP_FRAME_WINDOW = 4
+const JUMP_FRAME_WINDOW = 4 ## Frame leniency before the player is counted as "on the ground" again
 
-const SPRINT_MODIFIER = 1.25
-
-const MOUSE_SENSITIVITY = 0.2
+## Vertial camera constraints
 const CAMERA_CONSTRAINT_UP = 80
 const CAMERA_CONSTRAINT_DOWN = -90
 
-const FOV = 90
-const SPRINT_FOV = FOV + 5
-const SPRINT_FOV_SCALING = 0.1
+## Things that will be in settings
+var mouse_sensitivity = 0.2
+var fov = 90 :
+	set(value):
+		fov = value
+		player_camera.fov = fov
 
-# Grapple constants
-const GRAPPLE_SPEED = 0.85
-const GRAPPLE_RANGE = 15
+## Grapple variables (in case we wanna do upgrades or something
+var grapple_range: float = 15.0 :
+	set(value):
+		grapple_range = value
+		grapple_cast.target_position.z = -grapple_range
+var grapple_speed: float = 60.0
 
 var grapple_pos: Vector3 = Vector3.ZERO
 var grapple_mesh: MeshInstance3D
+var is_grappling: bool = false
 
 var jump_frame_timer: int = 0
 var friction: float = 6.0
@@ -31,38 +36,50 @@ var friction: float = 6.0
 @onready var head: Node3D = $Head
 @onready var player_camera: Camera3D = %PlayerCamera
 @onready var player_synchronizer: MultiplayerSynchronizer = %PlayerSynchronizer
+@onready var grapple_cast: RayCast3D = $Head/PlayerCamera/GrappleCast
+@onready var crosshair: Control
+
+func _enter_tree() -> void:
+	set_multiplayer_authority(name.to_int(), true) # Idk why the engine wants this in _enter_tree so badly but it does
 
 func _ready() -> void:
-	set_multiplayer_authority(name.to_int(), true)
+	get_tree().current_scene.connect("crosshair_changed", _crosshair_changed)
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	player_camera.fov = FOV
+	player_camera.fov = fov
+	grapple_cast.target_position.z = -grapple_range
 
-	if Network.connected_players.has(name.to_int()):
-		%Name.text = Network.connected_players[name.to_int()].name
-	else:
-		%Name.text = Network.player_info.name
-
-	if player_synchronizer.is_multiplayer_authority():
+	# We can't have just ANYONE taking over our player
+	if is_multiplayer_authority():
 		player_camera.current = true
 
+		if Network.connected_players.has(name.to_int()):
+			%Name.text = Network.connected_players[name.to_int()].name
+		else:
+			%Name.text = Network.player_info.name
+
+func _crosshair_changed(value) -> void:
+	crosshair = value
+
 func _physics_process(delta: float) -> void:
-	if not player_synchronizer.is_multiplayer_authority(): return
+	if multiplayer.has_multiplayer_peer() and not is_multiplayer_authority(): return
 
+	# Get player input
 	var input_dir := Input.get_vector("left", "right", "forward", "backward")
-
 	var wish_direction: Vector3 = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var wish_jump: bool = Input.is_action_just_pressed("jump")
 
+	# This gives a couple frames of leniency when bhopping
 	if jump_frame_timer > 0:
 		jump_frame_timer -= 1
 
+	# Source movement makes me horny
 	if is_on_floor():
 		if wish_jump:
 			velocity.y = JUMP_IMPULSE
 			velocity = accelerate(wish_direction, MAX_SPEED_AIR, delta)
 			wish_jump = false
 			jump_frame_timer = JUMP_FRAME_WINDOW
-		elif jump_frame_timer == 0:
+		elif jump_frame_timer == 0: # Frame leniency cuz i'm a pussy
 			var speed = velocity.length()
 
 			if speed != 0:
@@ -73,19 +90,28 @@ func _physics_process(delta: float) -> void:
 			velocity = accelerate(wish_direction, MAX_SPEED_GROUND, delta)
 	else:
 		velocity.y -= GRAVITY * delta
-	velocity = accelerate(wish_direction, MAX_SPEED_AIR, delta)
+		velocity = accelerate(wish_direction, MAX_SPEED_AIR, delta) # Where all the magic happens :3
 
-	# Apply the grapple force
-	if grapple_pos:
-		var grapple_direction: Vector3 = global_position.direction_to(grapple_pos)
+	if grapple_cast.is_colliding() or is_grappling:
 		var grapple_length: float = global_position.distance_to(grapple_pos)
-		var grapple_time: float = grapple_length / GRAPPLE_SPEED
-		var grapple_velocity: Vector3 = grapple_direction * (grapple_length / grapple_time)
+		if crosshair and crosshair.name == "GrappleHook" and grapple_pos:
+			crosshair.outer_element_distance = grapple_length / grapple_range * 40
 
-		velocity += grapple_velocity
+		if is_grappling:
+			var grapple_direction: Vector3 = global_position.direction_to(grapple_pos)
+			var grapple_velocity: Vector3 = grapple_direction * grapple_speed
 
-	#print("Wish velocity: %s" % wish_velocity)
-	print("Speed: %s" % velocity.length())
+			var grapple_difference: Vector3 = (grapple_velocity - velocity)
+			#var grapple_time: float = grapple_length / grapple_speed
+			#var grapple_velocity: Vector3 = grapple_direction * (grapple_length / grapple_time)
+
+			velocity += grapple_difference * delta
+		else:
+			grapple_pos = grapple_cast.get_collision_point()
+	else:
+		grapple_pos = Vector3.ZERO
+		crosshair.outer_element_distance = 60
+
 	move_and_slide()
 
 func accelerate(wish_dir: Vector3, max_speed: float, delta):
@@ -96,42 +122,31 @@ func accelerate(wish_dir: Vector3, max_speed: float, delta):
 	return velocity + add_speed * wish_dir
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not player_synchronizer.is_multiplayer_authority(): return
+	if multiplayer.has_multiplayer_peer() and not is_multiplayer_authority(): return
 
+	# Camera movement
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		player_camera.rotate_x(deg_to_rad(-event.relative.y * MOUSE_SENSITIVITY))
-		head.rotate_y(deg_to_rad(-event.relative.x * MOUSE_SENSITIVITY))
+		player_camera.rotate_x(deg_to_rad(-event.relative.y * mouse_sensitivity))
+		head.rotate_y(deg_to_rad(-event.relative.x * mouse_sensitivity))
 
 		player_camera.rotation_degrees.x = clamp(player_camera.rotation_degrees.x, CAMERA_CONSTRAINT_DOWN, CAMERA_CONSTRAINT_UP)
 
-	if event.is_action_pressed("grapple"):
-		grapple_pos = try_send_grapple()
+	# Grapple
+	if event.is_action_pressed("grapple") and grapple_pos:
+		is_grappling = true
+		if crosshair and crosshair.name == "GrappleHook":
+			crosshair.inner_element_distance = 5
 		if grapple_pos and not grapple_mesh:
 			draw_grapple(grapple_pos)
 
 	if event.is_action_released("grapple"):
 		if grapple_mesh:
 			grapple_mesh.queue_free()
-		grapple_pos = Vector3.ZERO
+		if crosshair and crosshair.name == "GrappleHook":
+			crosshair.inner_element_distance = 10
+		is_grappling = false
 
-	if event is InputEventKey and event.keycode == KEY_ESCAPE and event.is_released():
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-
-func try_send_grapple() -> Vector3:
-	var space_state = get_world_3d().direct_space_state
-
-	var end = player_camera.global_position + -player_camera.global_transform.basis.z * GRAPPLE_RANGE
-	var query = PhysicsRayQueryParameters3D.create(player_camera.global_position, end)
-	query.collision_mask = 0b10
-	var result = space_state.intersect_ray(query)
-	if result:
-		return result.position
-	else:
-		return Vector3.ZERO
-
+## Mostly just for testing
 func draw_grapple(pos: Vector3) -> void:
 	grapple_mesh = MeshInstance3D.new()
 	grapple_mesh.mesh = SphereMesh.new()
