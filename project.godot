@@ -12,9 +12,9 @@ config_version=5
 
 config/name="Grappling Hook"
 config/version="2a"
-config/tags=PackedStringArray("3d", "active", "micro_project")
+config/tags=PackedStringArray("3d", "micro_project", "shelved")
 run/main_scene="uid://cba18lb1adr66"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]

@@ -31,7 +31,7 @@ func _input(event: InputEvent) -> void:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		else:
-			Input.mouse_mode == Input.MOUSE_MODE_CAPTURED
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 func change_crosshair(crosshair_name: String) -> void:
 	if CROSSHAIRS.has(crosshair_name):

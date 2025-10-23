@@ -1,11 +1,10 @@
-[gd_scene load_steps=223 format=3 uid="uid://cba18lb1adr66"]
+[gd_scene load_steps=118 format=3 uid="uid://cba18lb1adr66"]
 
 [ext_resource type="PackedScene" uid="uid://dug4ymo133wxd" path="res://prefabs/player/player.tscn" id="1_jyhfs"]
 [ext_resource type="Script" uid="uid://6skv8mhf0lx3" path="res://scenes/main.gd" id="1_tefeu"]
 [ext_resource type="PackedScene" uid="uid://be0p2rhviwg5u" path="res://prefabs/ui/network_ui/network_ui.tscn" id="3_o6xl0"]
 [ext_resource type="Script" uid="uid://c5qt2a1vaouwm" path="res://prefabs/grapple_point/grapple_point.gd" id="3_tefeu"]
 [ext_resource type="Material" uid="uid://2mbra64gvxxq" path="res://scenes/world_boundary_material.tres" id="4_jyhfs"]
-[ext_resource type="Material" uid="uid://ch7jjtkj17ho0" path="res://prefabs/grapple_point/grapple_material.tres" id="5_tefeu"]
 
 [sub_resource type="GDScript" id="GDScript_tefeu"]
 resource_name = "Version"
@@ -17,972 +16,416 @@ func _ready() -> void:
 	text = \"Version: \" + ProjectSettings.get_setting(\"application/config/version\")
 "
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbgi4"]
+resource_local_to_scene = true
+size = Vector3(5, 1, 5)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_tefeu"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_o6xl0"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_o6xl0"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tipki"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_85g3d"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_85g3d"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_choun"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ya4ey"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ya4ey"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eb6dy"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_trceg"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_trceg"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a8y0u"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jkv2x"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jkv2x"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jbj1t"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_muem4"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_muem4"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dp3eg"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_0ld40"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0ld40"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gqmmt"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_yc10j"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yc10j"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jscy8"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_pm3ni"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_pm3ni"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6deb"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_og1vs"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_og1vs"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2wyq8"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_vxglm"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxglm"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2f3dj"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_yq6so"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_yq6so"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fv21b"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_tel4y"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tel4y"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qkpxi"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5q0nq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5q0nq"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dgi5k"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_j8jky"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_j8jky"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kmb1v"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_fuf3a"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_fuf3a"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pibwh"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_c6pm6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6pm6"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5he1u"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5poiv"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5poiv"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2cjbq"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_chjal"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_chjal"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cjqg0"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_vchkt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vchkt"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_txyw0"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_vc5cj"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vc5cj"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(5, 1, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nvyfr"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ty1g6"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_j2jfr"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ty1g6"]
 resource_local_to_scene = true
 size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_bjg73"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_j2jfr"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bu4jf"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_bjg73"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_o7ddy"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_bu4jf"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0loja"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_o7ddy"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_ids8r"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_0loja"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dnhof"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ids8r"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_1v6qk"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_dnhof"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_augu2"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_1v6qk"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_tm6hj"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_augu2"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kf5aa"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_tm6hj"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_t5ykj"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_kf5aa"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_e755i"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_t5ykj"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ro3en"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_e755i"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_od4ux"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ro3en"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_xhfw6"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_od4ux"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_1epgm"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xhfw6"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_152kg"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_1epgm"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r4e17"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_152kg"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_y57op"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_r4e17"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mlv25"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_y57op"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_a82wo"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_mlv25"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gdvew"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_a82wo"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_kjtvk"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_gdvew"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xrs0c"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_kjtvk"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_xljpf"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xrs0c"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_j4bwh"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xljpf"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_ksmap"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_j4bwh"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ygd8o"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ksmap"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_2s0kr"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ygd8o"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xaipn"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_2s0kr"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_ndrjj"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xaipn"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ih3m7"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ndrjj"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_11yus"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_ih3m7"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_b6ruc"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_11yus"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_155or"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_b6ruc"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vtx2l"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_155or"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_63lxy"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_vtx2l"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fjhjs"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_63lxy"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_bfu41"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_fjhjs"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_r4ag1"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_bfu41"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_v0wtd"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_r4ag1"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_sgvw8"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_v0wtd"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
+radius = 1.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_6nfnn"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_sgvw8"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
+radius = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6nfnn"]
+resource_local_to_scene = true
+radius = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ue30"]
 resource_local_to_scene = true
-size = Vector3(5, 1, 5)
-
-[sub_resource type="BoxMesh" id="BoxMesh_k42av"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(5, 1, 5)
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_gr8w0"]
-resource_local_to_scene = true
-
-[sub_resource type="SphereMesh" id="SphereMesh_673bd"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_akjxb"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_vrx01"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_1uevf"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_tc087"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_73205"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_0tljd"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_mgpkq"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_xmrkg"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_wvlrk"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_engxj"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_raiwf"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_roort"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_gm02q"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_07pt3"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_37xlc"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_83607"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_vny5k"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_8lcmr"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_ga3rw"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_f5chs"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_eh25q"]
-resource_local_to_scene = true
-
-[sub_resource type="SphereMesh" id="SphereMesh_joh2r"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_yton5"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_4ahvx"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_2cr71"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_1hbcg"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_m4o51"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_jp61a"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_esrwe"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_4b36k"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_1v8b0"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_683hg"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_ow8of"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_hj4tt"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_kqx4a"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_pfcs8"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_50d7c"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_ruytr"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_la3dr"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_hcsi8"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_wi1le"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_o7pr5"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_hyj2l"]
-resource_local_to_scene = true
-
-[sub_resource type="SphereMesh" id="SphereMesh_vuqay"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_wfmv0"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_wxrqn"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_n756u"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_k33j2"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_2cjf7"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_4e8e3"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_5gihh"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_407df"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_4sqen"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_w6a6y"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_knlx5"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_pes4l"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_s5e0g"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_uya8e"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_2tiby"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_1m7le"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_qqwal"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_qr8e4"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_d7502"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_avynn"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_eo1ke"]
-resource_local_to_scene = true
-
-[sub_resource type="SphereMesh" id="SphereMesh_j5vj0"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_kec7f"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_jgau6"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_6a1ct"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_xhrfq"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_2xesh"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_jexbj"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_0n3pv"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_lgnnt"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_6r4by"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_0gito"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_oh722"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_m4lup"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_redio"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_aiee3"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_8ojta"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_kmcm6"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_8jwmc"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_ybi5g"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_f4wrh"]
-resource_local_to_scene = true
-radius = 1.0
-
-[sub_resource type="SphereMesh" id="SphereMesh_smy15"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-radius = 1.0
-height = 2.0
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_d51im"]
-resource_local_to_scene = true
 size = Vector3(3, 1, 5)
 
-[sub_resource type="BoxMesh" id="BoxMesh_og54j"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(3, 1, 5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_404go"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_k42av"]
 resource_local_to_scene = true
 size = Vector3(15, 50, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_54fa5"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_m2f0f"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_gr8w0"]
 resource_local_to_scene = true
 size = Vector3(15, 200, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_41mld"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 200, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_j842w"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_673bd"]
 resource_local_to_scene = true
 size = Vector3(15, 200, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_m5a64"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 200, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_avkep"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_akjxb"]
 resource_local_to_scene = true
 size = Vector3(15, 200, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_sxhm0"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 200, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_cx1dt"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_vrx01"]
 resource_local_to_scene = true
 size = Vector3(15, 200, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_y5dkp"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 200, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_skhuf"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_1uevf"]
 resource_local_to_scene = true
 size = Vector3(15, 50, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_gq2if"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_lwxg6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tc087"]
 resource_local_to_scene = true
 size = Vector3(15, 50, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_2b86i"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hkub5"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_73205"]
 resource_local_to_scene = true
 size = Vector3(50, 5, 30)
 
-[sub_resource type="BoxMesh" id="BoxMesh_b6g1r"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(50, 5, 30)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_hyoe7"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_0tljd"]
 resource_local_to_scene = true
 size = Vector3(79.01, 5, 30)
 
-[sub_resource type="BoxMesh" id="BoxMesh_b7yds"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(79.01, 5, 30)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_mnra2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_mgpkq"]
 resource_local_to_scene = true
 size = Vector3(30, 5, 30)
 
-[sub_resource type="BoxMesh" id="BoxMesh_jjh0s"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(30, 5, 30)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_34ffc"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xmrkg"]
 resource_local_to_scene = true
 size = Vector3(15, 50, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_5eoch"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_dl2iq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_wvlrk"]
 resource_local_to_scene = true
 size = Vector3(15, 71.87, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_1nfnm"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 71.87, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_mm77e"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_engxj"]
 resource_local_to_scene = true
 size = Vector3(15, 50, 20)
 
-[sub_resource type="BoxMesh" id="BoxMesh_2yqmv"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_raiwf"]
 resource_local_to_scene = true
-material = ExtResource("5_tefeu")
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_7x15c"]
-resource_local_to_scene = true
-size = Vector3(15, 50, 20)
-
-[sub_resource type="BoxMesh" id="BoxMesh_888ul"]
-resource_local_to_scene = true
-material = ExtResource("5_tefeu")
 size = Vector3(15, 50, 20)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
@@ -1038,1457 +481,833 @@ script = SubResource("GDScript_tefeu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.5571, 0)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_tefeu")
+shape = SubResource("BoxShape3D_tbgi4")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32856" type="CollisionShape3D" parent="Obstacles/Start"]
-shape = SubResource("BoxShape3D_tefeu")
-
-[node name="@MeshInstance3D@32857" type="MeshInstance3D" parent="Obstacles/Start"]
-mesh = SubResource("BoxMesh_o6xl0")
 
 [node name="Start2" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.918564, 0, 0.395273, 0, 1, 0, -0.395273, 0, 0.918564, 13.5242, 20.6911, 14.7005)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_tipki")
+shape = SubResource("BoxShape3D_tefeu")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32858" type="CollisionShape3D" parent="Obstacles/Start2"]
-shape = SubResource("BoxShape3D_tipki")
-
-[node name="@MeshInstance3D@32859" type="MeshInstance3D" parent="Obstacles/Start2"]
-mesh = SubResource("BoxMesh_85g3d")
 
 [node name="Start4" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.988759, 0, -0.149518, 0, 1, 0, 0.149518, 0, 0.988759, -10.8762, 25.841, 18.2712)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_choun")
+shape = SubResource("BoxShape3D_o6xl0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32860" type="CollisionShape3D" parent="Obstacles/Start4"]
-shape = SubResource("BoxShape3D_choun")
-
-[node name="@MeshInstance3D@32861" type="MeshInstance3D" parent="Obstacles/Start4"]
-mesh = SubResource("BoxMesh_ya4ey")
 
 [node name="Start5" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.464208, 0, -0.885726, 0, 1, 0, 0.885726, 0, 0.464208, 12.7724, 33.2671, -14.1229)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_eb6dy")
+shape = SubResource("BoxShape3D_tipki")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32862" type="CollisionShape3D" parent="Obstacles/Start5"]
-shape = SubResource("BoxShape3D_eb6dy")
-
-[node name="@MeshInstance3D@32863" type="MeshInstance3D" parent="Obstacles/Start5"]
-mesh = SubResource("BoxMesh_trceg")
 
 [node name="Start6" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.426648, 0, -0.904418, 0, 1, 0, 0.904418, 0, -0.426648, -0.378666, 40.3417, -2.62055)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_a8y0u")
+shape = SubResource("BoxShape3D_85g3d")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32864" type="CollisionShape3D" parent="Obstacles/Start6"]
-shape = SubResource("BoxShape3D_a8y0u")
-
-[node name="@MeshInstance3D@32865" type="MeshInstance3D" parent="Obstacles/Start6"]
-mesh = SubResource("BoxMesh_jkv2x")
 
 [node name="Start7" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.426648, 0, -0.904418, 0, 1, 0, 0.904418, 0, -0.426648, -36.1376, 12.7095, 23.9297)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_jbj1t")
+shape = SubResource("BoxShape3D_choun")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32866" type="CollisionShape3D" parent="Obstacles/Start7"]
-shape = SubResource("BoxShape3D_jbj1t")
-
-[node name="@MeshInstance3D@32867" type="MeshInstance3D" parent="Obstacles/Start7"]
-mesh = SubResource("BoxMesh_muem4")
 
 [node name="Start8" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.955479, 0, -0.295058, 0, 1, 0, 0.295058, 0, -0.955479, -53.1392, 27.8451, -18.88)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_dp3eg")
+shape = SubResource("BoxShape3D_ya4ey")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32868" type="CollisionShape3D" parent="Obstacles/Start8"]
-shape = SubResource("BoxShape3D_dp3eg")
-
-[node name="@MeshInstance3D@32869" type="MeshInstance3D" parent="Obstacles/Start8"]
-mesh = SubResource("BoxMesh_0ld40")
 
 [node name="Start9" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 12.0847, 27.8451, 51.4077)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_gqmmt")
+shape = SubResource("BoxShape3D_eb6dy")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32870" type="CollisionShape3D" parent="Obstacles/Start9"]
-shape = SubResource("BoxShape3D_gqmmt")
-
-[node name="@MeshInstance3D@32871" type="MeshInstance3D" parent="Obstacles/Start9"]
-mesh = SubResource("BoxMesh_yc10j")
 
 [node name="Start10" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 30.0327, 17.6866, 47.5721)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_jscy8")
+shape = SubResource("BoxShape3D_trceg")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32872" type="CollisionShape3D" parent="Obstacles/Start10"]
-shape = SubResource("BoxShape3D_jscy8")
-
-[node name="@MeshInstance3D@32873" type="MeshInstance3D" parent="Obstacles/Start10"]
-mesh = SubResource("BoxMesh_pm3ni")
 
 [node name="Start38" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 9.0225, 4.94191, 56.4789)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_y6deb")
+shape = SubResource("BoxShape3D_a8y0u")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32874" type="CollisionShape3D" parent="Obstacles/Start38"]
-shape = SubResource("BoxShape3D_y6deb")
-
-[node name="@MeshInstance3D@32875" type="MeshInstance3D" parent="Obstacles/Start38"]
-mesh = SubResource("BoxMesh_og1vs")
 
 [node name="Start39" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 35.5129, 7.91981, 63.258)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_2wyq8")
+shape = SubResource("BoxShape3D_jkv2x")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32876" type="CollisionShape3D" parent="Obstacles/Start39"]
-shape = SubResource("BoxShape3D_2wyq8")
-
-[node name="@MeshInstance3D@32877" type="MeshInstance3D" parent="Obstacles/Start39"]
-mesh = SubResource("BoxMesh_vxglm")
 
 [node name="Start40" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, -13.0996, 2.47668, 49.1831)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_2f3dj")
+shape = SubResource("BoxShape3D_jbj1t")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32878" type="CollisionShape3D" parent="Obstacles/Start40"]
-shape = SubResource("BoxShape3D_2f3dj")
-
-[node name="@MeshInstance3D@32879" type="MeshInstance3D" parent="Obstacles/Start40"]
-mesh = SubResource("BoxMesh_yq6so")
 
 [node name="Start41" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.540784, 0, -0.841162, 0, 1, 0, 0.841162, 0, -0.540784, 8.72105, 9.2036, 27.4198)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_fv21b")
+shape = SubResource("BoxShape3D_muem4")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32880" type="CollisionShape3D" parent="Obstacles/Start41"]
-shape = SubResource("BoxShape3D_fv21b")
-
-[node name="@MeshInstance3D@32881" type="MeshInstance3D" parent="Obstacles/Start41"]
-mesh = SubResource("BoxMesh_tel4y")
 
 [node name="Start3" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.54093, 0, -0.841067, 0, 1, 0, 0.841067, 0, 0.54093, -13.1455, 11.426, -10.3219)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_qkpxi")
+shape = SubResource("BoxShape3D_dp3eg")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32882" type="CollisionShape3D" parent="Obstacles/Start3"]
-shape = SubResource("BoxShape3D_qkpxi")
-
-[node name="@MeshInstance3D@32883" type="MeshInstance3D" parent="Obstacles/Start3"]
-mesh = SubResource("BoxMesh_5q0nq")
 
 [node name="End" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.2825, 49.902, 9.15634)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_dgi5k")
+shape = SubResource("BoxShape3D_0ld40")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32884" type="CollisionShape3D" parent="Obstacles/End"]
-shape = SubResource("BoxShape3D_dgi5k")
-
-[node name="@MeshInstance3D@32885" type="MeshInstance3D" parent="Obstacles/End"]
-mesh = SubResource("BoxMesh_j8jky")
 
 [node name="Start11" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.24639, 0, 0.969171, 0, 1, 0, -0.969171, 0, 0.24639, 7.44934, 41.202, -2.23643)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_kmb1v")
+shape = SubResource("BoxShape3D_gqmmt")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32886" type="CollisionShape3D" parent="Obstacles/Start11"]
-shape = SubResource("BoxShape3D_kmb1v")
-
-[node name="@MeshInstance3D@32887" type="MeshInstance3D" parent="Obstacles/Start11"]
-mesh = SubResource("BoxMesh_fuf3a")
 
 [node name="Start12" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.721108, 0, 0.692823, 0, 1, 0, -0.692823, 0, 0.721108, -4.58955, 46.3519, 19.2856)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_pibwh")
+shape = SubResource("BoxShape3D_yc10j")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32888" type="CollisionShape3D" parent="Obstacles/Start12"]
-shape = SubResource("BoxShape3D_pibwh")
-
-[node name="@MeshInstance3D@32889" type="MeshInstance3D" parent="Obstacles/Start12"]
-mesh = SubResource("BoxMesh_c6pm6")
 
 [node name="Start13" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.985145, 0, -0.171723, 0, 1, 0, 0.171723, 0, 0.985145, -15.8616, 53.778, -19.2056)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_5he1u")
+shape = SubResource("BoxShape3D_jscy8")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32890" type="CollisionShape3D" parent="Obstacles/Start13"]
-shape = SubResource("BoxShape3D_5he1u")
-
-[node name="@MeshInstance3D@32891" type="MeshInstance3D" parent="Obstacles/Start13"]
-mesh = SubResource("BoxMesh_5poiv")
 
 [node name="Start14" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.457067, 0, -0.889432, 0, 1, 0, 0.889432, 0, 0.457067, -14.7563, 60.8526, -1.76912)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_2cjbq")
+shape = SubResource("BoxShape3D_pm3ni")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32892" type="CollisionShape3D" parent="Obstacles/Start14"]
-shape = SubResource("BoxShape3D_2cjbq")
-
-[node name="@MeshInstance3D@32893" type="MeshInstance3D" parent="Obstacles/Start14"]
-mesh = SubResource("BoxMesh_chjal")
 
 [node name="Start15" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.457067, 0, -0.889432, 0, 1, 0, 0.889432, 0, 0.457067, -15.4977, 33.2204, 42.7625)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_cjqg0")
+shape = SubResource("BoxShape3D_y6deb")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32894" type="CollisionShape3D" parent="Obstacles/Start15"]
-shape = SubResource("BoxShape3D_cjqg0")
-
-[node name="@MeshInstance3D@32895" type="MeshInstance3D" parent="Obstacles/Start15"]
-mesh = SubResource("BoxMesh_vchkt")
 
 [node name="Start16" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.348343, 0, -0.937367, 0, 1, 0, 0.937367, 0, -0.348343, -59.8006, 48.356, 30.1535)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_txyw0")
+shape = SubResource("BoxShape3D_og1vs")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32896" type="CollisionShape3D" parent="Obstacles/Start16"]
-shape = SubResource("BoxShape3D_txyw0")
-
-[node name="@MeshInstance3D@32897" type="MeshInstance3D" parent="Obstacles/Start16"]
-mesh = SubResource("BoxMesh_vc5cj")
 
 [node name="Start17" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 35.6755, 48.356, 21.2747)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_nvyfr")
+shape = SubResource("BoxShape3D_2wyq8")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32898" type="CollisionShape3D" parent="Obstacles/Start17"]
-shape = SubResource("BoxShape3D_nvyfr")
-
-[node name="@MeshInstance3D@32899" type="MeshInstance3D" parent="Obstacles/Start17"]
-mesh = SubResource("BoxMesh_ty1g6")
 
 [node name="Start18" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.337358, 0, -0.941376, 0, 1, 0, 0.941376, 0, 0.337358, 43.5722, 38.1975, 4.70717)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_j2jfr")
+shape = SubResource("BoxShape3D_vxglm")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32900" type="CollisionShape3D" parent="Obstacles/Start18"]
-shape = SubResource("BoxShape3D_j2jfr")
-
-[node name="@MeshInstance3D@32901" type="MeshInstance3D" parent="Obstacles/Start18"]
-mesh = SubResource("BoxMesh_bjg73")
 
 [node name="Start19" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.996493, 0, -0.0836778, 0, 1, 0, 0.0836778, 0, 0.996493, -28.6426, 31.9369, 3.65984)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_bu4jf")
+shape = SubResource("BoxShape3D_2f3dj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32902" type="CollisionShape3D" parent="Obstacles/Start19"]
-shape = SubResource("BoxShape3D_bu4jf")
-
-[node name="@MeshInstance3D@32903" type="MeshInstance3D" parent="Obstacles/Start19"]
-mesh = SubResource("BoxMesh_o7ddy")
 
 [node name="End2" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.609412, 0, 0.792854, 0, 1, 0, -0.792854, 0, 0.609412, 17.5322, 70.4129, -24.4519)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_0loja")
+shape = SubResource("BoxShape3D_yq6so")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32904" type="CollisionShape3D" parent="Obstacles/End2"]
-shape = SubResource("BoxShape3D_0loja")
-
-[node name="@MeshInstance3D@32905" type="MeshInstance3D" parent="Obstacles/End2"]
-mesh = SubResource("BoxMesh_ids8r")
 
 [node name="Start20" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.934615, 0, -0.355662, 0, 1, 0, 0.355662, 0, 0.934615, -7.06715, 54.3896, 42.2338)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_dnhof")
+shape = SubResource("BoxShape3D_fv21b")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32906" type="CollisionShape3D" parent="Obstacles/Start20"]
-shape = SubResource("BoxShape3D_dnhof")
-
-[node name="@MeshInstance3D@32907" type="MeshInstance3D" parent="Obstacles/Start20"]
-mesh = SubResource("BoxMesh_1v6qk")
 
 [node name="Start21" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.605766, 0, -0.795643, 0, 1, 0, 0.795643, 0, 0.605766, -27.0703, 59.5395, 27.8114)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_augu2")
+shape = SubResource("BoxShape3D_tel4y")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32908" type="CollisionShape3D" parent="Obstacles/Start21"]
-shape = SubResource("BoxShape3D_augu2")
-
-[node name="@MeshInstance3D@32909" type="MeshInstance3D" parent="Obstacles/Start21"]
-mesh = SubResource("BoxMesh_tm6hj")
 
 [node name="Start22" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.283312, 0, -0.959028, 0, 1, 0, 0.959028, 0, -0.283312, 12.4578, 66.9657, 21.0174)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_kf5aa")
+shape = SubResource("BoxShape3D_qkpxi")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32910" type="CollisionShape3D" parent="Obstacles/Start22"]
-shape = SubResource("BoxShape3D_kf5aa")
-
-[node name="@MeshInstance3D@32911" type="MeshInstance3D" parent="Obstacles/Start22"]
-mesh = SubResource("BoxMesh_t5ykj")
 
 [node name="Start23" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.935888, 0, -0.352299, 0, 1, 0, 0.352299, 0, -0.935888, -4.99068, 74.0403, 20.1205)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_e755i")
+shape = SubResource("BoxShape3D_5q0nq")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32912" type="CollisionShape3D" parent="Obstacles/Start23"]
-shape = SubResource("BoxShape3D_e755i")
-
-[node name="@MeshInstance3D@32913" type="MeshInstance3D" parent="Obstacles/Start23"]
-mesh = SubResource("BoxMesh_ro3en")
 
 [node name="Start24" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.935888, 0, -0.352299, 0, 1, 0, 0.352299, 0, -0.935888, -49.145, 46.4081, 14.2887)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_od4ux")
+shape = SubResource("BoxShape3D_dgi5k")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32914" type="CollisionShape3D" parent="Obstacles/Start24"]
-shape = SubResource("BoxShape3D_od4ux")
-
-[node name="@MeshInstance3D@32915" type="MeshInstance3D" parent="Obstacles/Start24"]
-mesh = SubResource("BoxMesh_xhfw6")
 
 [node name="Start25" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.891355, 0, 0.453306, 0, 1, 0, -0.453306, 0, -0.891355, -31.5498, 61.5436, -28.2805)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_1epgm")
+shape = SubResource("BoxShape3D_j8jky")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32916" type="CollisionShape3D" parent="Obstacles/Start25"]
-shape = SubResource("BoxShape3D_1epgm")
-
-[node name="@MeshInstance3D@32917" type="MeshInstance3D" parent="Obstacles/Start25"]
-mesh = SubResource("BoxMesh_152kg")
 
 [node name="Start26" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.973794, 0, -0.227433, 0, 1, 0, 0.227433, 0, -0.973794, -33.6535, 61.5436, 67.5845)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_r4e17")
+shape = SubResource("BoxShape3D_kmb1v")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32918" type="CollisionShape3D" parent="Obstacles/Start26"]
-shape = SubResource("BoxShape3D_r4e17")
-
-[node name="@MeshInstance3D@32919" type="MeshInstance3D" parent="Obstacles/Start26"]
-mesh = SubResource("BoxMesh_y57op")
 
 [node name="Start27" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.973794, 0, -0.227433, 0, 1, 0, 0.227433, 0, -0.973794, -18.0982, 51.3851, 77.3249)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_mlv25")
+shape = SubResource("BoxShape3D_fuf3a")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32920" type="CollisionShape3D" parent="Obstacles/Start27"]
-shape = SubResource("BoxShape3D_mlv25")
-
-[node name="@MeshInstance3D@32921" type="MeshInstance3D" parent="Obstacles/Start27"]
-mesh = SubResource("BoxMesh_a82wo")
 
 [node name="Start28" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.197144, 0, -0.980375, 0, 1, 0, 0.980375, 0, -0.197144, -8.79516, 45.1245, 5.70416)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_gdvew")
+shape = SubResource("BoxShape3D_pibwh")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32922" type="CollisionShape3D" parent="Obstacles/Start28"]
-shape = SubResource("BoxShape3D_gdvew")
-
-[node name="@MeshInstance3D@32923" type="MeshInstance3D" parent="Obstacles/Start28"]
-mesh = SubResource("BoxMesh_kjtvk")
 
 [node name="End3" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.71792, 0, -0.696126, 0, 1, 0, 0.696126, 0, 0.71792, 13.8488, 83.6005, 54.7922)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_xrs0c")
+shape = SubResource("BoxShape3D_c6pm6")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32924" type="CollisionShape3D" parent="Obstacles/End3"]
-shape = SubResource("BoxShape3D_xrs0c")
-
-[node name="@MeshInstance3D@32925" type="MeshInstance3D" parent="Obstacles/End3"]
-mesh = SubResource("BoxMesh_xljpf")
 
 [node name="Start29" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.118612, 0, -0.992941, 0, 1, 0, 0.992941, 0, -0.118612, -76.1708, 54.3896, 16.2531)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_j4bwh")
+shape = SubResource("BoxShape3D_5he1u")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32926" type="CollisionShape3D" parent="Obstacles/Start29"]
-shape = SubResource("BoxShape3D_j4bwh")
-
-[node name="@MeshInstance3D@32927" type="MeshInstance3D" parent="Obstacles/Start29"]
-mesh = SubResource("BoxMesh_ksmap")
 
 [node name="Start30" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.625161, 0, -0.780496, 0, 1, 0, 0.780496, 0, -0.625161, -67.0249, 59.5395, -6.6485)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_ygd8o")
+shape = SubResource("BoxShape3D_5poiv")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32928" type="CollisionShape3D" parent="Obstacles/Start30"]
-shape = SubResource("BoxShape3D_ygd8o")
-
-[node name="@MeshInstance3D@32929" type="MeshInstance3D" parent="Obstacles/Start30"]
-mesh = SubResource("BoxMesh_2s0kr")
 
 [node name="Start31" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.999096, 0, 0.0425034, 0, 1, 0, -0.0425034, 0, -0.999096, -50.8559, 66.9657, 30.0557)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_xaipn")
+shape = SubResource("BoxShape3D_2cjbq")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32930" type="CollisionShape3D" parent="Obstacles/Start31"]
-shape = SubResource("BoxShape3D_xaipn")
-
-[node name="@MeshInstance3D@32931" type="MeshInstance3D" parent="Obstacles/Start31"]
-mesh = SubResource("BoxMesh_ndrjj")
 
 [node name="Start32" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.568562, 0, 0.822641, 0, 1, 0, -0.822641, 0, -0.568562, -54.2133, 74.0403, 12.9098)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_ih3m7")
+shape = SubResource("BoxShape3D_chjal")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32932" type="CollisionShape3D" parent="Obstacles/Start32"]
-shape = SubResource("BoxShape3D_ih3m7")
-
-[node name="@MeshInstance3D@32933" type="MeshInstance3D" parent="Obstacles/Start32"]
-mesh = SubResource("BoxMesh_11yus")
 
 [node name="Start33" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.568562, 0, 0.822641, 0, 1, 0, -0.822641, 0, -0.568562, -59.2537, 46.4081, -31.3419)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_b6ruc")
+shape = SubResource("BoxShape3D_cjqg0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32934" type="CollisionShape3D" parent="Obstacles/Start33"]
-shape = SubResource("BoxShape3D_b6ruc")
-
-[node name="@MeshInstance3D@32935" type="MeshInstance3D" parent="Obstacles/Start33"]
-mesh = SubResource("BoxMesh_155or")
 
 [node name="Start34" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.223828, 0, 0.974628, 0, 1, 0, -0.974628, 0, 0.223828, -13.6897, 61.5436, -24.5853)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_vtx2l")
+shape = SubResource("BoxShape3D_vchkt")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32936" type="CollisionShape3D" parent="Obstacles/Start34"]
-shape = SubResource("BoxShape3D_vtx2l")
-
-[node name="@MeshInstance3D@32937" type="MeshInstance3D" parent="Obstacles/Start34"]
-mesh = SubResource("BoxMesh_63lxy")
 
 [node name="Start35" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.456601, 0, 0.889672, 0, 1, 0, -0.889672, 0, -0.456601, -107.208, 61.5436, -3.39868)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_fjhjs")
+shape = SubResource("BoxShape3D_txyw0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32938" type="CollisionShape3D" parent="Obstacles/Start35"]
-shape = SubResource("BoxShape3D_fjhjs")
-
-[node name="@MeshInstance3D@32939" type="MeshInstance3D" parent="Obstacles/Start35"]
-mesh = SubResource("BoxMesh_bfu41")
 
 [node name="Start36" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.456601, 0, 0.889672, 0, 1, 0, -0.889672, 0, -0.456601, -112.889, 51.3851, 14.0531)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_r4ag1")
+shape = SubResource("BoxShape3D_vc5cj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32940" type="CollisionShape3D" parent="Obstacles/Start36"]
-shape = SubResource("BoxShape3D_r4ag1")
-
-[node name="@MeshInstance3D@32941" type="MeshInstance3D" parent="Obstacles/Start36"]
-mesh = SubResource("BoxMesh_v0wtd")
 
 [node name="Start37" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.998929, 0, -0.0462696, 0, 1, 0, 0.0462696, 0, -0.998929, -41.1484, 45.1245, 5.72567)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_sgvw8")
+shape = SubResource("BoxShape3D_nvyfr")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32942" type="CollisionShape3D" parent="Obstacles/Start37"]
-shape = SubResource("BoxShape3D_sgvw8")
-
-[node name="@MeshInstance3D@32943" type="MeshInstance3D" parent="Obstacles/Start37"]
-mesh = SubResource("BoxMesh_6nfnn")
 
 [node name="End4" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.501435, 0, -0.865195, 0, 1, 0, 0.865195, 0, -0.501435, -83.2873, 83.6005, 39.5887)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_4ue30")
+shape = SubResource("BoxShape3D_ty1g6")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32944" type="CollisionShape3D" parent="Obstacles/End4"]
-shape = SubResource("BoxShape3D_4ue30")
-
-[node name="@MeshInstance3D@32945" type="MeshInstance3D" parent="Obstacles/End4"]
-mesh = SubResource("BoxMesh_k42av")
 
 [node name="GrapplePoint" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.80423, 22.9795, 3.39231)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_gr8w0")
+shape = SubResource("SphereShape3D_j2jfr")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32946" type="CollisionShape3D" parent="Obstacles/GrapplePoint"]
-shape = SubResource("SphereShape3D_gr8w0")
-
-[node name="@MeshInstance3D@32947" type="MeshInstance3D" parent="Obstacles/GrapplePoint"]
-mesh = SubResource("SphereMesh_673bd")
 
 [node name="GrapplePoint2" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 11.6692)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_akjxb")
+shape = SubResource("SphereShape3D_bjg73")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32948" type="CollisionShape3D" parent="Obstacles/GrapplePoint2"]
-shape = SubResource("SphereShape3D_akjxb")
-
-[node name="@MeshInstance3D@32949" type="MeshInstance3D" parent="Obstacles/GrapplePoint2"]
-mesh = SubResource("SphereMesh_vrx01")
 
 [node name="GrapplePoint18" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.771, 27.5977, 28.5624)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_1uevf")
+shape = SubResource("SphereShape3D_bu4jf")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32950" type="CollisionShape3D" parent="Obstacles/GrapplePoint18"]
-shape = SubResource("SphereShape3D_1uevf")
-
-[node name="@MeshInstance3D@32951" type="MeshInstance3D" parent="Obstacles/GrapplePoint18"]
-mesh = SubResource("SphereMesh_tc087")
 
 [node name="GrapplePoint19" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93121, 27.5977, 28.5624)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_73205")
+shape = SubResource("SphereShape3D_o7ddy")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32952" type="CollisionShape3D" parent="Obstacles/GrapplePoint19"]
-shape = SubResource("SphereShape3D_73205")
-
-[node name="@MeshInstance3D@32953" type="MeshInstance3D" parent="Obstacles/GrapplePoint19"]
-mesh = SubResource("SphereMesh_0tljd")
 
 [node name="GrapplePoint20" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.93121, 54.1507, 28.5624)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_mgpkq")
+shape = SubResource("SphereShape3D_0loja")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32954" type="CollisionShape3D" parent="Obstacles/GrapplePoint20"]
-shape = SubResource("SphereShape3D_mgpkq")
-
-[node name="@MeshInstance3D@32955" type="MeshInstance3D" parent="Obstacles/GrapplePoint20"]
-mesh = SubResource("SphereMesh_xmrkg")
 
 [node name="GrapplePoint21" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4112, 54.1507, 28.5624)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_wvlrk")
+shape = SubResource("SphereShape3D_ids8r")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32956" type="CollisionShape3D" parent="Obstacles/GrapplePoint21"]
-shape = SubResource("SphereShape3D_wvlrk")
-
-[node name="@MeshInstance3D@32957" type="MeshInstance3D" parent="Obstacles/GrapplePoint21"]
-mesh = SubResource("SphereMesh_engxj")
 
 [node name="GrapplePoint22" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.4112, 54.1507, 8.19061)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_raiwf")
+shape = SubResource("SphereShape3D_dnhof")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32958" type="CollisionShape3D" parent="Obstacles/GrapplePoint22"]
-shape = SubResource("SphereShape3D_raiwf")
-
-[node name="@MeshInstance3D@32959" type="MeshInstance3D" parent="Obstacles/GrapplePoint22"]
-mesh = SubResource("SphereMesh_roort")
 
 [node name="GrapplePoint23" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.701324, 54.1507, 51.2929)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_gm02q")
+shape = SubResource("SphereShape3D_1v6qk")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32960" type="CollisionShape3D" parent="Obstacles/GrapplePoint23"]
-shape = SubResource("SphereShape3D_gm02q")
-
-[node name="@MeshInstance3D@32961" type="MeshInstance3D" parent="Obstacles/GrapplePoint23"]
-mesh = SubResource("SphereMesh_07pt3")
 
 [node name="GrapplePoint24" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.5025, 71.0601, 51.2929)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_37xlc")
+shape = SubResource("SphereShape3D_augu2")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32962" type="CollisionShape3D" parent="Obstacles/GrapplePoint24"]
-shape = SubResource("SphereShape3D_37xlc")
-
-[node name="@MeshInstance3D@32963" type="MeshInstance3D" parent="Obstacles/GrapplePoint24"]
-mesh = SubResource("SphereMesh_83607")
 
 [node name="GrapplePoint25" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.6081, 71.0601, 58.9655)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_vny5k")
+shape = SubResource("SphereShape3D_tm6hj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32964" type="CollisionShape3D" parent="Obstacles/GrapplePoint25"]
-shape = SubResource("SphereShape3D_vny5k")
-
-[node name="@MeshInstance3D@32965" type="MeshInstance3D" parent="Obstacles/GrapplePoint25"]
-mesh = SubResource("SphereMesh_8lcmr")
 
 [node name="GrapplePoint26" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.5905, 71.1356, 4.61954)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_ga3rw")
+shape = SubResource("SphereShape3D_kf5aa")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32966" type="CollisionShape3D" parent="Obstacles/GrapplePoint26"]
-shape = SubResource("SphereShape3D_ga3rw")
-
-[node name="@MeshInstance3D@32967" type="MeshInstance3D" parent="Obstacles/GrapplePoint26"]
-mesh = SubResource("SphereMesh_f5chs")
 
 [node name="GrapplePoint27" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 13.1949, 29.4801, 9.07267)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_eh25q")
+shape = SubResource("SphereShape3D_t5ykj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32968" type="CollisionShape3D" parent="Obstacles/GrapplePoint27"]
-shape = SubResource("SphereShape3D_eh25q")
-
-[node name="@MeshInstance3D@32969" type="MeshInstance3D" parent="Obstacles/GrapplePoint27"]
-mesh = SubResource("SphereMesh_joh2r")
 
 [node name="GrapplePoint28" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 21.1222, 34.0983, 28.1882)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_yton5")
+shape = SubResource("SphereShape3D_e755i")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32970" type="CollisionShape3D" parent="Obstacles/GrapplePoint28"]
-shape = SubResource("SphereShape3D_yton5")
-
-[node name="@MeshInstance3D@32971" type="MeshInstance3D" parent="Obstacles/GrapplePoint28"]
-mesh = SubResource("SphereMesh_4ahvx")
 
 [node name="GrapplePoint29" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 9.40845, 34.0983, 40.3606)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_2cr71")
+shape = SubResource("SphereShape3D_ro3en")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32972" type="CollisionShape3D" parent="Obstacles/GrapplePoint29"]
-shape = SubResource("SphereShape3D_2cr71")
-
-[node name="@MeshInstance3D@32973" type="MeshInstance3D" parent="Obstacles/GrapplePoint29"]
-mesh = SubResource("SphereMesh_1hbcg")
 
 [node name="GrapplePoint30" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 34.0983, 23.83)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_m4o51")
+shape = SubResource("SphereShape3D_od4ux")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32974" type="CollisionShape3D" parent="Obstacles/GrapplePoint30"]
-shape = SubResource("SphereShape3D_m4o51")
-
-[node name="@MeshInstance3D@32975" type="MeshInstance3D" parent="Obstacles/GrapplePoint30"]
-mesh = SubResource("SphereMesh_jp61a")
 
 [node name="GrapplePoint31" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 60.6514, 23.83)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_esrwe")
+shape = SubResource("SphereShape3D_xhfw6")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32976" type="CollisionShape3D" parent="Obstacles/GrapplePoint31"]
-shape = SubResource("SphereShape3D_esrwe")
-
-[node name="@MeshInstance3D@32977" type="MeshInstance3D" parent="Obstacles/GrapplePoint31"]
-mesh = SubResource("SphereMesh_4b36k")
 
 [node name="GrapplePoint32" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -28.1915, 60.6514, 4.17739)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_1v8b0")
+shape = SubResource("SphereShape3D_1epgm")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32978" type="CollisionShape3D" parent="Obstacles/GrapplePoint32"]
-shape = SubResource("SphereShape3D_1v8b0")
-
-[node name="@MeshInstance3D@32979" type="MeshInstance3D" parent="Obstacles/GrapplePoint32"]
-mesh = SubResource("SphereMesh_683hg")
 
 [node name="GrapplePoint33" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -14.0656, 60.6514, -10.5015)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_ow8of")
+shape = SubResource("SphereShape3D_152kg")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32980" type="CollisionShape3D" parent="Obstacles/GrapplePoint33"]
-shape = SubResource("SphereShape3D_ow8of")
-
-[node name="@MeshInstance3D@32981" type="MeshInstance3D" parent="Obstacles/GrapplePoint33"]
-mesh = SubResource("SphereMesh_hj4tt")
 
 [node name="GrapplePoint34" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -25.1375, 60.6514, 38.6623)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_kqx4a")
+shape = SubResource("SphereShape3D_r4e17")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32982" type="CollisionShape3D" parent="Obstacles/GrapplePoint34"]
-shape = SubResource("SphereShape3D_kqx4a")
-
-[node name="@MeshInstance3D@32983" type="MeshInstance3D" parent="Obstacles/GrapplePoint34"]
-mesh = SubResource("SphereMesh_pfcs8")
 
 [node name="GrapplePoint35" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -44.0187, 77.5607, 20.4925)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_50d7c")
+shape = SubResource("SphereShape3D_y57op")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32984" type="CollisionShape3D" parent="Obstacles/GrapplePoint35"]
-shape = SubResource("SphereShape3D_50d7c")
-
-[node name="@MeshInstance3D@32985" type="MeshInstance3D" parent="Obstacles/GrapplePoint35"]
-mesh = SubResource("SphereMesh_ruytr")
 
 [node name="GrapplePoint36" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -17.5549, 77.5607, 56.6074)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_la3dr")
+shape = SubResource("SphereShape3D_mlv25")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32986" type="CollisionShape3D" parent="Obstacles/GrapplePoint36"]
-shape = SubResource("SphereShape3D_la3dr")
-
-[node name="@MeshInstance3D@32987" type="MeshInstance3D" parent="Obstacles/GrapplePoint36"]
-mesh = SubResource("SphereMesh_hcsi8")
 
 [node name="GrapplePoint37" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -13.8803, 77.6362, -15.2792)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_wi1le")
+shape = SubResource("SphereShape3D_a82wo")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32988" type="CollisionShape3D" parent="Obstacles/GrapplePoint37"]
-shape = SubResource("SphereShape3D_wi1le")
-
-[node name="@MeshInstance3D@32989" type="MeshInstance3D" parent="Obstacles/GrapplePoint37"]
-mesh = SubResource("SphereMesh_o7pr5")
 
 [node name="GrapplePoint38" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 13.1949, 82.6241, 9.07267)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_hyj2l")
+shape = SubResource("SphereShape3D_gdvew")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32990" type="CollisionShape3D" parent="Obstacles/GrapplePoint38"]
-shape = SubResource("SphereShape3D_hyj2l")
-
-[node name="@MeshInstance3D@32991" type="MeshInstance3D" parent="Obstacles/GrapplePoint38"]
-mesh = SubResource("SphereMesh_vuqay")
 
 [node name="GrapplePoint39" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 21.1222, 87.2423, 28.1882)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_wfmv0")
+shape = SubResource("SphereShape3D_kjtvk")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32992" type="CollisionShape3D" parent="Obstacles/GrapplePoint39"]
-shape = SubResource("SphereShape3D_wfmv0")
-
-[node name="@MeshInstance3D@32993" type="MeshInstance3D" parent="Obstacles/GrapplePoint39"]
-mesh = SubResource("SphereMesh_wxrqn")
 
 [node name="GrapplePoint40" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, 9.40845, 87.2423, 40.3606)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_n756u")
+shape = SubResource("SphereShape3D_xrs0c")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32994" type="CollisionShape3D" parent="Obstacles/GrapplePoint40"]
-shape = SubResource("SphereShape3D_n756u")
-
-[node name="@MeshInstance3D@32995" type="MeshInstance3D" parent="Obstacles/GrapplePoint40"]
-mesh = SubResource("SphereMesh_k33j2")
 
 [node name="GrapplePoint41" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 87.2423, 23.83)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_2cjf7")
+shape = SubResource("SphereShape3D_xljpf")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32996" type="CollisionShape3D" parent="Obstacles/GrapplePoint41"]
-shape = SubResource("SphereShape3D_2cjf7")
-
-[node name="@MeshInstance3D@32997" type="MeshInstance3D" parent="Obstacles/GrapplePoint41"]
-mesh = SubResource("SphereMesh_4e8e3")
 
 [node name="GrapplePoint42" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -7.76934, 113.795, 23.83)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_5gihh")
+shape = SubResource("SphereShape3D_j4bwh")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@32998" type="CollisionShape3D" parent="Obstacles/GrapplePoint42"]
-shape = SubResource("SphereShape3D_5gihh")
-
-[node name="@MeshInstance3D@32999" type="MeshInstance3D" parent="Obstacles/GrapplePoint42"]
-mesh = SubResource("SphereMesh_407df")
 
 [node name="GrapplePoint43" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -28.1915, 113.795, 4.17739)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_4sqen")
+shape = SubResource("SphereShape3D_ksmap")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33000" type="CollisionShape3D" parent="Obstacles/GrapplePoint43"]
-shape = SubResource("SphereShape3D_4sqen")
-
-[node name="@MeshInstance3D@33001" type="MeshInstance3D" parent="Obstacles/GrapplePoint43"]
-mesh = SubResource("SphereMesh_w6a6y")
 
 [node name="GrapplePoint44" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -14.0656, 113.795, -10.5015)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_knlx5")
+shape = SubResource("SphereShape3D_ygd8o")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33002" type="CollisionShape3D" parent="Obstacles/GrapplePoint44"]
-shape = SubResource("SphereShape3D_knlx5")
-
-[node name="@MeshInstance3D@33003" type="MeshInstance3D" parent="Obstacles/GrapplePoint44"]
-mesh = SubResource("SphereMesh_pes4l")
 
 [node name="GrapplePoint45" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -25.1375, 113.795, 38.6623)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_s5e0g")
+shape = SubResource("SphereShape3D_2s0kr")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33004" type="CollisionShape3D" parent="Obstacles/GrapplePoint45"]
-shape = SubResource("SphereShape3D_s5e0g")
-
-[node name="@MeshInstance3D@33005" type="MeshInstance3D" parent="Obstacles/GrapplePoint45"]
-mesh = SubResource("SphereMesh_uya8e")
 
 [node name="GrapplePoint46" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -44.0187, 130.705, 20.4925)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_2tiby")
+shape = SubResource("SphereShape3D_xaipn")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33006" type="CollisionShape3D" parent="Obstacles/GrapplePoint46"]
-shape = SubResource("SphereShape3D_2tiby")
-
-[node name="@MeshInstance3D@33007" type="MeshInstance3D" parent="Obstacles/GrapplePoint46"]
-mesh = SubResource("SphereMesh_1m7le")
 
 [node name="GrapplePoint47" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -17.5549, 130.705, 56.6074)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_qqwal")
+shape = SubResource("SphereShape3D_ndrjj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33008" type="CollisionShape3D" parent="Obstacles/GrapplePoint47"]
-shape = SubResource("SphereShape3D_qqwal")
-
-[node name="@MeshInstance3D@33009" type="MeshInstance3D" parent="Obstacles/GrapplePoint47"]
-mesh = SubResource("SphereMesh_qr8e4")
 
 [node name="GrapplePoint48" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.720551, 0, -0.693402, 0, 1, 0, 0.693402, 0, 0.720551, -13.8803, 130.78, -15.2792)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_d7502")
+shape = SubResource("SphereShape3D_ih3m7")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33010" type="CollisionShape3D" parent="Obstacles/GrapplePoint48"]
-shape = SubResource("SphereShape3D_d7502")
-
-[node name="@MeshInstance3D@33011" type="MeshInstance3D" parent="Obstacles/GrapplePoint48"]
-mesh = SubResource("SphereMesh_avynn")
 
 [node name="GrapplePoint49" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 47.159, 82.6241, -6.45303)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_eo1ke")
+shape = SubResource("SphereShape3D_11yus")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33012" type="CollisionShape3D" parent="Obstacles/GrapplePoint49"]
-shape = SubResource("SphereShape3D_eo1ke")
-
-[node name="@MeshInstance3D@33013" type="MeshInstance3D" parent="Obstacles/GrapplePoint49"]
-mesh = SubResource("SphereMesh_j5vj0")
 
 [node name="GrapplePoint50" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 61.7329, 87.2423, 8.23876)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_kec7f")
+shape = SubResource("SphereShape3D_b6ruc")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33014" type="CollisionShape3D" parent="Obstacles/GrapplePoint50"]
-shape = SubResource("SphereShape3D_kec7f")
-
-[node name="@MeshInstance3D@33015" type="MeshInstance3D" parent="Obstacles/GrapplePoint50"]
-mesh = SubResource("SphereMesh_jgau6")
 
 [node name="GrapplePoint51" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 55.499, 87.2423, 23.9397)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_6a1ct")
+shape = SubResource("SphereShape3D_155or")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33016" type="CollisionShape3D" parent="Obstacles/GrapplePoint51"]
-shape = SubResource("SphereShape3D_6a1ct")
-
-[node name="@MeshInstance3D@33017" type="MeshInstance3D" parent="Obstacles/GrapplePoint51"]
-mesh = SubResource("SphereMesh_xhrfq")
 
 [node name="GrapplePoint52" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 33.3418, 87.2423, 15.1424)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_2xesh")
+shape = SubResource("SphereShape3D_vtx2l")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33018" type="CollisionShape3D" parent="Obstacles/GrapplePoint52"]
-shape = SubResource("SphereShape3D_2xesh")
-
-[node name="@MeshInstance3D@33019" type="MeshInstance3D" parent="Obstacles/GrapplePoint52"]
-mesh = SubResource("SphereMesh_jexbj")
 
 [node name="GrapplePoint53" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 33.3418, 113.795, 15.1424)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_0n3pv")
+shape = SubResource("SphereShape3D_63lxy")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33020" type="CollisionShape3D" parent="Obstacles/GrapplePoint53"]
-shape = SubResource("SphereShape3D_0n3pv")
-
-[node name="@MeshInstance3D@33021" type="MeshInstance3D" parent="Obstacles/GrapplePoint53"]
-mesh = SubResource("SphereMesh_lgnnt")
 
 [node name="GrapplePoint54" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 6.99973, 113.795, 4.68357)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_6r4by")
+shape = SubResource("SphereShape3D_fjhjs")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33022" type="CollisionShape3D" parent="Obstacles/GrapplePoint54"]
-shape = SubResource("SphereShape3D_6r4by")
-
-[node name="@MeshInstance3D@33023" type="MeshInstance3D" parent="Obstacles/GrapplePoint54"]
-mesh = SubResource("SphereMesh_0gito")
 
 [node name="GrapplePoint55" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 14.5173, 113.795, -14.2504)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_oh722")
+shape = SubResource("SphereShape3D_bfu41")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33024" type="CollisionShape3D" parent="Obstacles/GrapplePoint55"]
-shape = SubResource("SphereShape3D_oh722")
-
-[node name="@MeshInstance3D@33025" type="MeshInstance3D" parent="Obstacles/GrapplePoint55"]
-mesh = SubResource("SphereMesh_m4lup")
 
 [node name="GrapplePoint56" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 22.8813, 113.795, 35.4458)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_redio")
+shape = SubResource("SphereShape3D_r4ag1")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33026" type="CollisionShape3D" parent="Obstacles/GrapplePoint56"]
-shape = SubResource("SphereShape3D_redio")
-
-[node name="@MeshInstance3D@33027" type="MeshInstance3D" parent="Obstacles/GrapplePoint56"]
-mesh = SubResource("SphereMesh_aiee3")
 
 [node name="GrapplePoint57" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, -1.47311, 130.705, 25.7761)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_8ojta")
+shape = SubResource("SphereShape3D_v0wtd")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33028" type="CollisionShape3D" parent="Obstacles/GrapplePoint57"]
-shape = SubResource("SphereShape3D_8ojta")
-
-[node name="@MeshInstance3D@33029" type="MeshInstance3D" parent="Obstacles/GrapplePoint57"]
-mesh = SubResource("SphereMesh_kmcm6")
 
 [node name="GrapplePoint58" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 36.693, 130.705, 49.1848)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_8jwmc")
+shape = SubResource("SphereShape3D_sgvw8")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33030" type="CollisionShape3D" parent="Obstacles/GrapplePoint58"]
-shape = SubResource("SphereShape3D_8jwmc")
-
-[node name="@MeshInstance3D@33031" type="MeshInstance3D" parent="Obstacles/GrapplePoint58"]
-mesh = SubResource("SphereMesh_ybi5g")
 
 [node name="GrapplePoint59" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.929423, 0, -0.369017, 0, 1, 0, 0.369017, 0, 0.929423, 12.8801, 130.78, -18.7427)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("SphereShape3D_f4wrh")
+shape = SubResource("SphereShape3D_6nfnn")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33032" type="CollisionShape3D" parent="Obstacles/GrapplePoint59"]
-shape = SubResource("SphereShape3D_f4wrh")
-
-[node name="@MeshInstance3D@33033" type="MeshInstance3D" parent="Obstacles/GrapplePoint59"]
-mesh = SubResource("SphereMesh_smy15")
 
 [node name="GrapplePoint3" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0, 1, -5.78945, 14.501, 0)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_d51im")
+shape = SubResource("BoxShape3D_4ue30")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33034" type="CollisionShape3D" parent="Obstacles/GrapplePoint3"]
-shape = SubResource("BoxShape3D_d51im")
-
-[node name="@MeshInstance3D@33035" type="MeshInstance3D" parent="Obstacles/GrapplePoint3"]
-mesh = SubResource("BoxMesh_og54j")
 
 [node name="GrapplePoint4" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.4558, -4.86648, 0)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_404go")
+shape = SubResource("BoxShape3D_k42av")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33036" type="CollisionShape3D" parent="Obstacles/GrapplePoint4"]
-shape = SubResource("BoxShape3D_404go")
-
-[node name="@MeshInstance3D@33037" type="MeshInstance3D" parent="Obstacles/GrapplePoint4"]
-mesh = SubResource("BoxMesh_54fa5")
 
 [node name="GrapplePoint5" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.873976, 0, -0.485969, 0, 1, 0, 0.485969, 0, -0.873976, 0.962494, 82.7329, -75.0683)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_m2f0f")
+shape = SubResource("BoxShape3D_gr8w0")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33038" type="CollisionShape3D" parent="Obstacles/GrapplePoint5"]
-shape = SubResource("BoxShape3D_m2f0f")
-
-[node name="@MeshInstance3D@33039" type="MeshInstance3D" parent="Obstacles/GrapplePoint5"]
-mesh = SubResource("BoxMesh_41mld")
 
 [node name="GrapplePoint11" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.99926, 0, -0.038475, 0, 1, 0, 0.038475, 0, 0.99926, 98.237, 18.8102, -8.35308)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_j842w")
+shape = SubResource("BoxShape3D_673bd")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33040" type="CollisionShape3D" parent="Obstacles/GrapplePoint11"]
-shape = SubResource("BoxShape3D_j842w")
-
-[node name="@MeshInstance3D@33041" type="MeshInstance3D" parent="Obstacles/GrapplePoint11"]
-mesh = SubResource("BoxMesh_m5a64")
 
 [node name="GrapplePoint12" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.951728, 0, 0.306941, 0, 1, 0, -0.306941, 0, 0.951728, -13.4001, 53.9273, 110.413)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_avkep")
+shape = SubResource("BoxShape3D_akjxb")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33042" type="CollisionShape3D" parent="Obstacles/GrapplePoint12"]
-shape = SubResource("BoxShape3D_avkep")
-
-[node name="@MeshInstance3D@33043" type="MeshInstance3D" parent="Obstacles/GrapplePoint12"]
-mesh = SubResource("BoxMesh_sxhm0")
 
 [node name="GrapplePoint13" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.738891, 0, -0.673825, 0, 1, 0, 0.673825, 0, -0.738891, -125.383, -2.71513, -35.9298)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_cx1dt")
+shape = SubResource("BoxShape3D_vrx01")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33044" type="CollisionShape3D" parent="Obstacles/GrapplePoint13"]
-shape = SubResource("BoxShape3D_cx1dt")
-
-[node name="@MeshInstance3D@33045" type="MeshInstance3D" parent="Obstacles/GrapplePoint13"]
-mesh = SubResource("BoxMesh_y5dkp")
 
 [node name="GrapplePoint6" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.0405502, 0, 0.999177, 0, 1, 0, -0.999177, 0, 0.0405502, -36.1852, 12.2696, 60.0506)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_skhuf")
+shape = SubResource("BoxShape3D_1uevf")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33046" type="CollisionShape3D" parent="Obstacles/GrapplePoint6"]
-shape = SubResource("BoxShape3D_skhuf")
-
-[node name="@MeshInstance3D@33047" type="MeshInstance3D" parent="Obstacles/GrapplePoint6"]
-mesh = SubResource("BoxMesh_gq2if")
 
 [node name="GrapplePoint14" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.318777, 0, 0.94783, 0, 1, 0, -0.94783, 0, 0.318777, -62.9444, 99.678, 79.1741)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_lwxg6")
+shape = SubResource("BoxShape3D_tc087")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33048" type="CollisionShape3D" parent="Obstacles/GrapplePoint14"]
-shape = SubResource("BoxShape3D_lwxg6")
-
-[node name="@MeshInstance3D@33049" type="MeshInstance3D" parent="Obstacles/GrapplePoint14"]
-mesh = SubResource("BoxMesh_2b86i")
 
 [node name="GrapplePoint15" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.318777, 0, 0.94783, 0, 1, 0, -0.94783, 0, 0.318777, 79.3864, 99.678, 59.7929)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_hkub5")
+shape = SubResource("BoxShape3D_73205")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33050" type="CollisionShape3D" parent="Obstacles/GrapplePoint15"]
-shape = SubResource("BoxShape3D_hkub5")
-
-[node name="@MeshInstance3D@33051" type="MeshInstance3D" parent="Obstacles/GrapplePoint15"]
-mesh = SubResource("BoxMesh_b6g1r")
 
 [node name="GrapplePoint16" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.431314, 0, -0.902202, 0, 1, 0, 0.902202, 0, 0.431314, 54.2711, 99.678, -101.547)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_hyoe7")
+shape = SubResource("BoxShape3D_0tljd")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33052" type="CollisionShape3D" parent="Obstacles/GrapplePoint16"]
-shape = SubResource("BoxShape3D_hyoe7")
-
-[node name="@MeshInstance3D@33053" type="MeshInstance3D" parent="Obstacles/GrapplePoint16"]
-mesh = SubResource("BoxMesh_b7yds")
 
 [node name="GrapplePoint17" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.431314, 0, -0.902202, 0, 1, 0, 0.902202, 0, 0.431314, -30.0338, 99.678, 13.2611)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_mnra2")
+shape = SubResource("BoxShape3D_mgpkq")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33054" type="CollisionShape3D" parent="Obstacles/GrapplePoint17"]
-shape = SubResource("BoxShape3D_mnra2")
-
-[node name="@MeshInstance3D@33055" type="MeshInstance3D" parent="Obstacles/GrapplePoint17"]
-mesh = SubResource("BoxMesh_jjh0s")
 
 [node name="GrapplePoint7" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(-0.365039, 0, 0.930992, 0, 1, 0, -0.930992, 0, -0.365039, -76.4583, 151.044, 28.8153)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_34ffc")
+shape = SubResource("BoxShape3D_xmrkg")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33056" type="CollisionShape3D" parent="Obstacles/GrapplePoint7"]
-shape = SubResource("BoxShape3D_34ffc")
-
-[node name="@MeshInstance3D@33057" type="MeshInstance3D" parent="Obstacles/GrapplePoint7"]
-mesh = SubResource("BoxMesh_5eoch")
 
 [node name="GrapplePoint8" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.661875, 0, -0.749614, 0, 1, 0, 0.749614, 0, 0.661875, 49.3783, 32.886, -30.3784)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_dl2iq")
+shape = SubResource("BoxShape3D_wvlrk")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33058" type="CollisionShape3D" parent="Obstacles/GrapplePoint8"]
-shape = SubResource("BoxShape3D_dl2iq")
-
-[node name="@MeshInstance3D@33059" type="MeshInstance3D" parent="Obstacles/GrapplePoint8"]
-mesh = SubResource("BoxMesh_1nfnm")
 
 [node name="GrapplePoint9" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.893802, 0, 0.448461, 0, 1, 0, -0.448461, 0, 0.893802, 32.29, 62.6002, 39.1964)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_mm77e")
+shape = SubResource("BoxShape3D_engxj")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33060" type="CollisionShape3D" parent="Obstacles/GrapplePoint9"]
-shape = SubResource("BoxShape3D_mm77e")
-
-[node name="@MeshInstance3D@33061" type="MeshInstance3D" parent="Obstacles/GrapplePoint9"]
-mesh = SubResource("BoxMesh_2yqmv")
 
 [node name="GrapplePoint10" type="StaticBody3D" parent="Obstacles"]
 transform = Transform3D(0.517235, 0, 0.855843, 0, 1, 0, -0.855843, 0, 0.517235, -44.7088, 23.8768, -47.6525)
 collision_layer = 3
 script = ExtResource("3_tefeu")
-shape = SubResource("BoxShape3D_7x15c")
+shape = SubResource("BoxShape3D_raiwf")
 metadata/_custom_type_script = "uid://c5qt2a1vaouwm"
 metadata/_edit_group_ = true
-
-[node name="@CollisionShape3D@33062" type="CollisionShape3D" parent="Obstacles/GrapplePoint10"]
-shape = SubResource("BoxShape3D_7x15c")
-
-[node name="@MeshInstance3D@33063" type="MeshInstance3D" parent="Obstacles/GrapplePoint10"]
-mesh = SubResource("BoxMesh_888ul")
 
 [node name="Environment" type="Node" parent="."]
 
